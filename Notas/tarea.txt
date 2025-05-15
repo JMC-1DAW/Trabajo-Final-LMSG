@@ -1,0 +1,82 @@
+Deberá crearse, como mínimo dos páginas web, una principal y otra secundaria. El trabajo web deberá contener los documentos HTML, CSS, XML, DTD XSL y JAVASCRIPT, todos ellos en su respectivo archivo.
+
+A continuación, se expondrán los puntos mínimos para obtener el aprobado y los elementos que sumarán a partir de estos. En caso de no cumplir el mínimo exigido, no se sumará el segundo apartado:
+
+
+HTML
+
+Mínimo:
+ - Uso del DOCTYPE 
+ - Uso de la etiqueta <title>
+ - Uso de links en texto (tanto a nivel interno como externo)
+ - Uso de listas (mínimo 2)
+ - Insertar imágenes (mínimo 5)
+ - Uso de negrita, subrayado y cursiva
+ - Uso de div
+Sumatorio:
+ - Uso de clases (0,5 ptos)
+ - Uso de id (0,5 ptos)
+ - Uso de tablas  (mínimo 1) (1 pto)
+ - Colocar links en imágenes (0,75 ptos)
+ - El link se abra en una nueva página (0,25 ptos)
+ - Colocar un menú (2 ptos)
+
+
+CSS
+
+Mínimo:
+ - Uso de padding
+ - Uso de margin
+ - Personalización de imágenes
+ - Personalización de las listas
+ - Personalización de links
+ - Personalización de algunos div
+Sumatorio:
+ - Personalización de la/s tabla/s (1,75 ptos)
+ - Personalización del menú (2 ptos)
+ - Personalización del fondo (0,5 ptos)
+ - Uso del hover (0,25 ptos)
+ - Uso de degradados ( 0,25 ptos)
+ - Uso de opacidad (0,25 ptos)
+
+
+XML
+
+Mínimo:
+ - Uso correcto y ordenado del root, elementos y subelementos (debe tener un root, mínimo 6 elementos y mínimo 3 subelementos)
+ - Uso del <?xml...?>
+Sumatorio:
+ - Uso de atributos ( mínimo 3) (2,5 ptos)
+ - Uso de elementos vacíos (mínimo 2) ( 2,5 ptos)
+
+
+DTD
+
+Mínimo:
+ - Todos los elementos del XML deben verse reflejados en el DTD.
+ - Uso correcto de los factores de repetición (*, ?, +, )
+Sumatorio:
+ - Uso del ANY (1 pto)
+ - Uso del ID (1 pto)
+ - Uso del IDREF (1 pto)
+ - Uso correcto del comportamiento de los atributos (#REQUIRED, #IMPLIED, #FIXED,  ) (2 ptos)
+
+
+XSLT
+
+Mínimo:
+ - Uso del for-each
+Sumatorio:
+ - Uso del if (2,5 puntos)
+ - Uso del sort-of ( 2,5 puntos)
+
+
+JavaScript
+
+Mínimo:
+ - Pedir nombre (puede ser nada más entrar en la página o dándole a un botón)
+ - Pedir edad (igual que en el apartado anterior, pero dependiendo de si es mayor o menor que 18, saldrá un mensaje de respuesta diferente)
+Sumatorio:
+ - Personalizador de tema de color de la web (2 ptos)
+ - Simular un carrito de compra (3 ptos)
+

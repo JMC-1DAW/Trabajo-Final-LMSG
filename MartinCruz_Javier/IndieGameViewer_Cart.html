@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="carrito-page">
+    <header>
+        <nav>
+            <select id="tema-color">
+                <option value="dark">Tema oscuro</option>
+                <option value="light">Tema claro</option>
+                <option value="vacio">Tema vacío</option>
+                <option value="dorado">Tema dorado</option>
+            </select>
+            <select id="menu">
+                <option value="carrito">Carrito</option>
+                <option value="main">Juegos Indie</option>
+                <option value="top-juegos">Top mejores juegos</option>
+            </select>
+            <div id="user-info" style="display: none;">
+                <span id="user-display"></span>
+                <button id="change-user">Cambiar</button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Formulario para pedir nombre y edad -->
+    <div id="user-form" style="display: none;">
+        <form id="user-data-form">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" required>
+            <label for="edad">Edad:</label>
+            <input type="number" id="edad" required>
+            <button type="submit">Guardar</button>
+        </form>
+    </div>
+
+    <main>
+        <section class="carrito">
+            <h2>Tu Carrito</h2>
+            <ul id="carrito-display">
+                <!-- Los elementos del carrito se mostrarán aquí dinámicamente -->
+            </ul>
+            <p><strong>Total:</strong> <span id="total">0.00€</span></p>
+            <p><i>(Ten en cuenta que este apartado SOLO CALCULA EL PRECIO de los juegos en el carrito y no sirve para comprar los juegos seleccionados)</i></p>
+        </section>
+
+        <section class="informacion">
+            <h3>¿Cómo funciona el carrito?</h3>
+            <p>El carrito de compras te permite calcular el precio total de los juegos que deseas adquirir. Sin embargo, este proyecto es solo una demostración académica y no realiza compras reales.</p>
+            <p>Para comprar los juegos seleccionados, visita las páginas oficiales de los desarrolladores o distribuidores.</p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="logo">
+            <img src="img/logo.png" alt="Logo de la Empresa" width="100">
+        </div>
+        <p>&copy; 2025 IndieGameViewer</p>
+        <p>Creado por: Javier Martín Cruz (1ºDAW)</p>
+
+        <br>
+        <div class="disclaimer">
+            <h3>Descargo de Responsabilidad</h3>
+            <p>Ten en cuenta que el carrito de esta página SOLO CALCULA EL PRECIO de los juegos en el carrito y no sirve para comprar los juegos seleccionados</p>
+            <p>Este proyecto es un trabajo académico y no tiene fines comerciales.</p>
+            <p>Este proyecto fue desarrollado como parte de un curso de Desarrollo Web.</p>
+            <p>Los derechos de autor de los juegos mostrados pertenecen a sus respectivos propietarios.</p>
+            <p>Este proyecto no está afiliado a ninguna empresa o entidad relacionada con los juegos mostrados.</p>
+            <p>Este proyecto es una demostración de habilidades en HTML, CSS, XML, DTD, XSLT y JavaScript.</p>
+            <p>El uso de imágenes y nombres de juegos es puramente ilustrativo y no implica ningún tipo de asociación.</p>
+            <p>Este proyecto no tiene fines de lucro y se realiza con fines educativos.</p>
+            <p>Este proyecto es un trabajo individual y no representa la opinión de ninguna institución.</p>
+            <p>Si tienes alguna pregunta o inquietud, no dudes en ponerte en contacto con el autor.</p>
+            <p>El logo fue creado por ChatGPT.</p>
+            <p>Gracias por tu comprensión y apoyo.</p>
+            <p>¡Disfruta de los juegos!</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

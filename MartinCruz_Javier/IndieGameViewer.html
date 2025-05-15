@@ -1,0 +1,1316 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IndieGameViewer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <select id="tema-color">
+                <option value="dark">Tema oscuro</option>
+                <option value="light">Tema claro</option>
+                <option value="vacio">Tema vacío</option>
+                <option value="dorado">Tema dorado</option>
+            </select>
+            <select id="menu">
+                <option value="main">Juegos Indie</option>
+                <option value="top-juegos">Top mejores juegos</option>
+                <option value="carrito">Carrito</option>
+            </select>
+            <div id="user-info" style="display: none;">
+                <span id="user-display"></span>
+                <button id="change-user">Cambiar</button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Formulario para pedir nombre y edad -->
+    <div id="user-form" style="display: none;">
+        <form id="user-data-form">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" required>
+            <label for="edad">Edad:</label>
+            <input type="number" id="edad" required>
+            <button type="submit">Guardar</button>
+        </form>
+    </div>
+
+    <main>
+    <!-- Juego 1 -->
+    <section>
+        <div class="juego">
+            <h2>Oneshot</h2>
+            <a href="https://store.steampowered.com/app/420530/OneShot/?l=spanish" target="_blank"><img src="img/juegos/Oneshot.jpg" alt="Oneshot"></a>
+            <ul>
+                <li><b>Descripción:</b> OneShot es un juego de aventuras y rompecabezas surrealista con perspectiva a vista de pájaro y una jugabilidad única. Tienes que guiar a un niño a través de un misterioso mundo en una misión para recuperar su sol, que murió hace mucho tiempo. El mundo sabe que existes.</li>
+                <li><b>Género:</b> Aventura, Casual, Indie</li>
+                <li><b>Precio:</b> 9.75€</li>
+                <li><b>Valoración:</b> Extremadamente positiva</li>
+                <li><b>Fecha de salida:</b> 9 de Diciembre de 2016</li>
+                <li><b>Desarrollador:</b> Future Cat LLC</li>
+                <li><b>Editor:</b> KOMODO</li>
+                <li><b>Edad recomendada:</b> Todas las edades</li>
+            </ul>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Requisitos</th>
+                        <th>Mínimos</th>
+                        <th>Recomendados</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Sistema operativo</td>
+                        <td>Windows Visa or later</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>RAM</td>
+                        <td>4 GB</td>
+                        <td>4 GB</td>
+                    </tr>
+                    <tr>
+                        <td>Gráficos</td>
+                        <td>OpenGL 2.1 compatible</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+            <button class="add-to-cart">Añadir al carrito</button>
+            <p><a href="https://store.steampowered.com/app/420530/OneShot/?l=spanish" target="_blank">Página de Steam</a></p>
+        </div>
+
+        <div class="juego">
+            <h2>Terraria</h2>
+             <a href="https://store.steampowered.com/app/105600/Terraria/?l=spanish" target="_blank"><img src="img/juegos/Terraria.jpg" alt="Terraria"></a>
+            <ul>
+                <li><b>Descripción:</b> Terraria es un juego de aventuras y sandbox en 2D que te permite explorar, construir, luchar y sobrevivir en un mundo generado de manera procedural. ¡La aventura te espera!</li>
+                <li><b>Género:</b> Acción, Aventura, Indie</li>
+                <li><b>Precio:</b> 9.99€</li>
+                <li><b>Valoración:</b> Extremadamente positiva</li>
+                <li><b>Fecha de salida:</b> 16 de Mayo de 2011</li>
+                <li><b>Desarrollador:</b> Re-Logic</li>
+                <li><b>Editor:</b> Re-Logic</li>
+                <li><b>Edad recomendada:</b> Todas las edades</li>
+            </ul>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Requisitos</th>
+                        <th>Mínimos</th>
+                        <th>Recomendados</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Sistema operativo</td>
+                        <td>Windows 7, 8, 8.1, 10</td>
+                        <td>Windows 10</td>
+                    </tr>
+                    <tr>
+                        <td>Procesador</td>
+                        <td>2.0 GHz</td>
+                        <td>Dual Core 3.0 GHz</td>
+                    </tr>
+                    <tr>
+                        <td>RAM</td>
+                        <td>2.5 GB</td>
+                        <td>4 GB</td>
+                    </tr>
+                    <tr>
+                        <td>Gráficos</td>
+                        <td>128 MB VRAM, capaz de Shader Model 2.0+</td>
+                        <td>256 MB VRAM, capaz de Shader Model 2.0+</td>
+                    </tr>
+                    <tr>
+                        <td>DirectX</td>
+                        <td>Versión 9.0c</td>
+                        <td>Versión 11</td>
+                    </tr>
+                    <tr>
+                        <td>Almacenamiento</td>
+                        <td>200 MB de espacio disponible</td>
+                        <td>200 MB de espacio disponible</td>
+                    </tr>
+                    <tr>
+                        <td>Tarjeta de sonido</td>
+                        <td>Compatible con DirectX</td>
+                        <td>Compatible con DirectX</td>
+                    </tr>
+                </tbody>
+            </table>
+            <button class="add-to-cart">Añadir al carrito</button>
+            <p><a href="https://store.steampowered.com/app/105600/Terraria/?l=spanish" target="_blank">Página de Steam</a></p>
+        </div>
+
+        <div class="juego">
+            <h2>Slime Rancher</h2>
+            <a href="https://store.steampowered.com/app/433340/Slime_Rancher/?l=spanish" target="_blank"><img src="img/juegos/SlimeRancher.jpg" alt="Slime Rancher"></a>
+            <ul>
+                <li><b>Descripción:</b> Slime Rancher es un encantador juego de simulación en primera persona. Juega como Beatrix LeBeau, una joven ranchera que se embarca en una vida a mil años luz de la Tierra en el "Lejano, Lejano Oeste". Explora, recolecta y cría adorables slimes mientras descubres los secretos de este colorido mundo.</li>
+                <li><b>Género:</b> Aventura, Indie, Simulación</li>
+                <li><b>Precio:</b> 19.99€</li>
+                <li><b>Valoración:</b> Extremadamente positiva</li>
+                <li><b>Fecha de salida:</b> 1 de Agosto de 2017</li>
+                <li><b>Desarrollador:</b> Monomi Park</li>
+                <li><b>Editor:</b> Monomi Park</li>
+                <li><b>Edad recomendada:</b> Todas las edades</li>
+            </ul>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Requisitos</th>
+                        <th>Mínimos</th>
+                        <th>Recomendados</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Sistema operativo</td>
+                        <td>Windows 7+</td>
+                        <td>Windows 7+</td>
+                    </tr>
+                    <tr>
+                        <td>Procesador</td>
+                        <td>Dual Core 2.2GHz</td>
+                        <td>Dual Core 2.2GHz</td>
+                    </tr>
+                    <tr>
+                        <td>RAM</td>
+                        <td>4 GB</td>
+                        <td>8 GB</td>
+                    </tr>
+                    <tr>
+                        <td>Gráficos</td>
+                        <td>512MB VRAM</td>
+                        <td>1GB VRAM</td>
+                    </tr>
+                    <tr>
+                        <td>DirectX</td>
+                        <td>Versión 11</td>
+                        <td>Versión 11</td>
+                    </tr>
+                    <tr>
+                        <td>Almacenamiento</td>
+                        <td>1 GB de espacio disponible</td>
+                        <td>1 GB de espacio disponible</td>
+                    </tr>
+                </tbody>
+            </table>
+            <button class="add-to-cart">Añadir al carrito</button>
+            <p><a href="https://store.steampowered.com/app/433340/Slime_Rancher/?l=spanish" target="_blank">Página de Steam</a></p>
+        </div>
+
+        <div class="juego">
+            <h2>The Binding of Isaac: Rebirth</h2>
+            <a href="https://store.steampowered.com/app/250900/The_Binding_of_Isaac_Rebirth/?l=spanish" target="_blank"><img src="img/juegos/BindingOfIsaac.jpg" alt="The Binding of Isaac: Rebirth"></a>
+            <ul>
+                <li><b>Descripción:</b> The Binding of Isaac: Rebirth es un juego de acción y exploración de mazmorras generado de manera procedural. Ayuda a Isaac a escapar de su madre enfrentándote a hordas de enemigos, descubriendo secretos y recolectando objetos únicos.</li>
+                <li><b>Género:</b> Acción, Aventura, Indie</li>
+                <li><b>Precio:</b> 14.99€</li>
+                <li><b>Valoración:</b> Extremadamente positiva</li>
+                <li><b>Fecha de salida:</b> 4 de Noviembre de 2014</li>
+                <li><b>Desarrollador:</b> Nicalis, Inc.</li>
+                <li><b>Editor:</b> Nicalis, Inc.</li>
+                <li><b>Edad recomendada:</b> Mayores de 16 años</li>
+            </ul>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Requisitos</th>
+                        <th>Mínimos</th>
+                        <th>Recomendados</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Sistema operativo</td>
+                        <td>Windows XP</td>
+                        <td>Windows 7+</td>
+                    </tr>
+                    <tr>
+                        <td>Procesador</td>
+                        <td>Dual Core</td>
+                        <td>Quad Core</td>
+                    </tr>
+                    <tr>
+                        <td>RAM</td>
+                        <td>2 GB</td>
+                        <td>4 GB</td>
+                    </tr>
+                    <tr>
+                        <td>Gráficos</td>
+                        <td>Intel HD Graphics</td>
+                        <td>1GB VRAM</td>
+                    </tr>
+                    <tr>
+                        <td>DirectX</td>
+                        <td>Versión 9.0c</td>
+                        <td>Versión 11</td>
+                    </tr>
+                    <tr>
+                        <td>Almacenamiento</td>
+                        <td>500 MB de espacio disponible</td>
+                        <td>500 MB de espacio disponible</td>
+                    </tr>
+                </tbody>
+            </table>
+            <button class="add-to-cart">Añadir al carrito</button>
+            <p><a href="https://store.steampowered.com/app/250900/The_Binding_of_Isaac_Rebirth/?l=spanish" target="_blank">Página de Steam</a></p>
+        </div>
+
+        <div class="juego">
+            <h2>The Room Two</h2>
+            <a href="https://store.steampowered.com/app/425580/The_Room_Two/?l=spanish" target="_blank"><img src="img/juegos/TheRoomTwo.jpg" alt="The Room Two"></a>
+            <ul>
+                <li><b>Descripción:</b> The Room Two es un juego de rompecabezas en 3D que te sumerge en un mundo de misterio y exploración. Resuelve acertijos intrincados y descubre secretos ocultos mientras avanzas a través de habitaciones llenas de enigmas.</li>
+                <li><b>Género:</b> Aventura, Indie</li>
+                <li><b>Precio:</b> 4.99€</li>
+                <li><b>Valoración:</b> Muy positiva</li>
+                <li><b>Fecha de salida:</b> 5 de Julio de 2016</li>
+                <li><b>Desarrollador:</b> Fireproof Games</li>
+                <li><b>Editor:</b> Fireproof Games</li>
+                <li><b>Edad recomendada:</b> Todas las edades</li>
+            </ul>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Requisitos</th>
+                        <th>Mínimos</th>
+                        <th>Recomendados</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Sistema operativo</td>
+                        <td>Windows 7</td>
+                        <td>Windows 10</td>
+                    </tr>
+                    <tr>
+                        <td>Procesador</td>
+                        <td>2.0 GHz Dual Core</td>
+                        <td>2.8 GHz Quad Core</td>
+                    </tr>
+                    <tr>
+                        <td>RAM</td>
+                        <td>2 GB</td>
+                        <td>4 GB</td>
+                    </tr>
+                    <tr>
+                        <td>Gráficos</td>
+                        <td>512MB VRAM</td>
+                        <td>1GB VRAM</td>
+                    </tr>
+                    <tr>
+                        <td>DirectX</td>
+                        <td>Versión 9.0c</td>
+                        <td>Versión 11</td>
+                    </tr>
+                    <tr>
+                        <td>Almacenamiento</td>
+                        <td>2 GB de espacio disponible</td>
+                        <td>2 GB de espacio disponible</td>
+                    </tr>
+                </tbody>
+            </table>
+            <button class="add-to-cart">Añadir al carrito</button>
+            <p><a href="https://store.steampowered.com/app/425580/The_Room_Two/?l=spanish" target="_blank">Página de Steam</a></p>
+        </div>
+
+        <div class="juego">
+            <h2>Into The Radius VR</h2>
+            <a href="https://store.steampowered.com/app/1012790/Into_the_Radius_VR/?l=spanish" target="_blank"><img src="img/juegos/IntoTheRadiusVR.jpg" alt="Into The Radius VR"></a>
+            <ul>
+                <li><b>Descripción:</b> Into The Radius VR es un juego de supervivencia y exploración en realidad virtual ambientado en un mundo postapocalíptico lleno de misterio y peligro. Explora la zona, recolecta recursos, lucha contra enemigos y descubre los secretos de este inquietante universo.</li>
+                <li><b>Género:</b> Acción, Aventura, Indie, Simulación</li>
+                <li><b>Precio:</b> 28.99€</li>
+                <li><b>Valoración:</b> Muy positiva</li>
+                <li><b>Fecha de salida:</b> 20 de Julio de 2020</li>
+                <li><b>Desarrollador:</b> CM Games</li>
+                <li><b>Editor:</b> CM Games</li>
+                <li><b>Edad recomendada:</b> Mayores de 16 años</li>
+            </ul>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Requisitos</th>
+                        <th>Mínimos</th>
+                        <th>Recomendados</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Sistema operativo</td>
+                        <td>Windows 10</td>
+                        <td>Windows 10</td>
+                    </tr>
+                    <tr>
+                        <td>Procesador</td>
+                        <td>Intel i5-7500 / Ryzen 5 1600</td>
+                        <td>Intel i7-9700K / Ryzen 7 3700X</td>
+                    </tr>
+                    <tr>
+                        <td>RAM</td>
+                        <td>12 GB</td>
+                        <td>16 GB</td>
+                    </tr>
+                    <tr>
+                        <td>Gráficos</td>
+                        <td>NVIDIA GTX 1060 / AMD RX 580</td>
+                        <td>NVIDIA RTX 2070 / AMD RX 5700 XT</td>
+                    </tr>
+                    <tr>
+                        <td>DirectX</td>
+                        <td>Versión 11</td>
+                        <td>Versión 11</td>
+                    </tr>
+                    <tr>
+                        <td>Almacenamiento</td>
+                        <td>20 GB de espacio disponible</td>
+                        <td>20 GB de espacio disponible</td>
+                    </tr>
+                </tbody>
+            </table>
+            <button class="add-to-cart">Añadir al carrito</button>
+            <p><a href="https://store.steampowered.com/app/1012790/Into_the_Radius_VR/?l=spanish" target="_blank">Página de Steam</a></p>
+        </div>
+
+        <div class="juego">
+            <h2>Geometry Dash</h2>
+            <a href="https://store.steampowered.com/app/322170/Geometry_Dash/?l=spanish" target="_blank"><img src="img/juegos/GeometryDash.jpg" alt="Geometry Dash"></a>
+            <ul>
+                <li><b>Descripción:</b> Geometry Dash es un juego de plataformas de ritmo rápido que te desafía a saltar y volar a través de niveles peligrosos llenos de obstáculos.</li>
+                <li><b>Género:</b> Indie</li>
+                <li><b>Precio:</b> 3.99€</li>
+                <li><b>Valoración:</b> Muy positiva</li>
+                <li><b>Fecha de salida:</b> 22 de Diciembre de 2014</li>
+                <li><b>Desarrollador:</b> RobTop Games</li>
+                <li><b>Editor:</b> RobTop Games</li>
+                <li><b>Edad recomendada:</b> Todas las edades</li>
+            </ul>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Requisitos</th>
+                        <th>Mínimos</th>
+                        <th>Recomendados</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Sistema operativo</td>
+                        <td>Windows XP</td>
+                        <td>Windows 10</td>
+                    </tr>
+                    <tr>
+                        <td>Procesador</td>
+                        <td>2.0 GHz</td>
+                        <td>2.0 GHz</td>
+                    </tr>
+                    <tr>
+                        <td>RAM</td>
+                        <td>512 MB</td>
+                        <td>1 GB</td>
+                    </tr>
+                    <tr>
+                        <td>Gráficos</td>
+                        <td>Compatible con OpenGL 2.0</td>
+                        <td>Compatible con OpenGL 2.0</td>
+                    </tr>
+                    <tr>
+                        <td>Almacenamiento</td>
+                        <td>100 MB de espacio disponible</td>
+                        <td>100 MB de espacio disponible</td>
+                    </tr>
+                </tbody>
+            </table>
+            <button class="add-to-cart">Añadir al carrito</button>
+            <p><a href="https://store.steampowered.com/app/322170/Geometry_Dash/?l=spanish" target="_blank">Página de Steam</a></p>
+        </div>
+
+        <div class="juego">
+            <h2>DAVE THE DIVER</h2>
+            <a href="https://store.steampowered.com/app/1868140/DAVE_THE_DIVER/?l=spanish" target="_blank"><img src="img/juegos/DaveTheDiver.jpg" alt="DAVE THE DIVER"></a>
+            <ul>
+                <li><b>Descripción:</b> DAVE THE DIVER es un juego de aventuras casual que combina exploración submarina y gestión de un restaurante de sushi.</li>
+                <li><b>Género:</b> Aventura, Casual, Indie</li>
+                <li><b>Precio:</b> 19.99€</li>
+                <li><b>Valoración:</b> Extremadamente positiva</li>
+                <li><b>Fecha de salida:</b> 28 de Junio de 2023</li>
+                <li><b>Desarrollador:</b> MINTROCKET</li>
+                <li><b>Editor:</b> MINTROCKET</li>
+                <li><b>Edad recomendada:</b> Todas las edades</li>
+            </ul>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Requisitos</th>
+                        <th>Mínimos</th>
+                        <th>Recomendados</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Sistema operativo</td>
+                        <td>Windows 10</td>
+                        <td>Windows 10</td>
+                    </tr>
+                    <tr>
+                        <td>Procesador</td>
+                        <td>Intel Core i3 Dual Core</td>
+                        <td>Intel Core i5 Quad Core</td>
+                    </tr>
+                    <tr>
+                        <td>RAM</td>
+                        <td>8 GB</td>
+                        <td>16 GB</td>
+                    </tr>
+                    <tr>
+                        <td>Gráficos</td>
+                        <td>NVIDIA GTX 750 Ti</td>
+                        <td>NVIDIA GTX 1060</td>
+                    </tr>
+                    <tr>
+                        <td>Almacenamiento</td>
+                        <td>10 GB de espacio disponible</td>
+                        <td>10 GB de espacio disponible</td>
+                    </tr>
+                </tbody>
+            </table>
+            <button class="add-to-cart">Añadir al carrito</button>
+            <p><a href="https://store.steampowered.com/app/1868140/DAVE_THE_DIVER/?l=spanish" target="_blank">Página de Steam</a></p>
+        </div>
+
+        <div class="juego">
+            <h2>Balatro</h2>
+            <a href="https://store.steampowered.com/app/2379780/Balatro/?l=spanish" target="_blank"><img src="img/juegos/Balatro.jpg" alt="Balatro"></a>
+            <ul>
+                <li><b>Descripción:</b> Balatro es un juego de construcción de mazos roguelike que combina estrategia y humor en un mundo lleno de desafíos únicos.</li>
+                <li><b>Género:</b> Indie, Estrategia</li>
+                <li><b>Precio:</b> 14.99€</li>
+                <li><b>Valoración:</b> Extremadamente positiva</li>
+                <li><b>Fecha de salida:</b> 2 de Mayo de 2023</li>
+                <li><b>Desarrollador:</b> The Balatro Team</li>
+                <li><b>Editor:</b> The Balatro Team</li>
+                <li><b>Edad recomendada:</b> Todas las edades</li>
+            </ul>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Requisitos</th>
+                        <th>Mínimos</th>
+                        <th>Recomendados</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Sistema operativo</td>
+                        <td>Windows 7</td>
+                        <td>Windows 10</td>
+                    </tr>
+                    <tr>
+                        <td>Procesador</td>
+                        <td>Intel Core i3</td>
+                        <td>Intel Core i5</td>
+                    </tr>
+                    <tr>
+                        <td>RAM</td>
+                        <td>4 GB</td>
+                        <td>8 GB</td>
+                    </tr>
+                    <tr>
+                        <td>Gráficos</td>
+                        <td>Intel HD Graphics</td>
+                        <td>NVIDIA GTX 960</td>
+                    </tr>
+                    <tr>
+                        <td>Almacenamiento</td>
+                        <td>2 GB de espacio disponible</td>
+                        <td>2 GB de espacio disponible</td>
+                    </tr>
+                </tbody>
+            </table>
+            <button class="add-to-cart">Añadir al carrito</button>
+            <p><a href="https://store.steampowered.com/app/2379780/Balatro/?l=spanish" target="_blank">Página de Steam</a></p>
+        </div>
+
+        <div class="juego">
+            <h2>Just Shapes & Beats</h2>
+            <a href="https://store.steampowered.com/app/531510/Just_Shapes_&_Beats/?l=spanish" target="_blank"><img src="img/juegos/JustShapesAndBeats.jpg" alt="Just Shapes & Beats"></a>
+            <ul>
+                <li><b>Descripción:</b> Just Shapes & Beats es un juego de acción musical cooperativo basado en evitar obstáculos al ritmo de la música.</li>
+                <li><b>Género:</b> Acción, Indie</li>
+                <li><b>Precio:</b> 19.99€</li>
+                <li><b>Valoración:</b> Extremadamente positiva</li>
+                <li><b>Fecha de salida:</b> 31 de Mayo de 2018</li>
+                <li><b>Desarrollador:</b> Berzerk Studio</li>
+                <li><b>Editor:</b> Berzerk Studio</li>
+                <li><b>Edad recomendada:</b> Todas las edades</li>
+            </ul>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Requisitos</th>
+                        <th>Mínimos</th>
+                        <th>Recomendados</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Sistema operativo</td>
+                        <td>Windows 7</td>
+                        <td>Windows 10</td>
+                    </tr>
+                    <tr>
+                        <td>Procesador</td>
+                        <td>Intel Core i3</td>
+                        <td>Intel Core i5</td>
+                    </tr>
+                    <tr>
+                        <td>RAM</td>
+                        <td>4 GB</td>
+                        <td>8 GB</td>
+                    </tr>
+                    <tr>
+                        <td>Gráficos</td>
+                        <td>Intel HD Graphics</td>
+                        <td>NVIDIA GTX 960</td>
+                    </tr>
+                    <tr>
+                        <td>Almacenamiento</td>
+                        <td>1 GB de espacio disponible</td>
+                        <td>1 GB de espacio disponible</td>
+                    </tr>
+                </tbody>
+            </table>
+            <button class="add-to-cart">Añadir al carrito</button>
+            <p><a href="https://store.steampowered.com/app/531510/Just_Shapes_&_Beats/?l=spanish" target="_blank">Página de Steam</a></p>
+        </div>
+
+        
+        <div class="juego">
+            <h2>Forager</h2>
+            <a href="https://store.steampowered.com/app/751780/Forager/?l=spanish" target="_blank"><img src="img/juegos/Forager.jpg" alt="Forager"></a>
+            <ul>
+                <li><b>Descripción:</b> Forager es un juego de mundo abierto inspirado en la exploración, la agricultura y la construcción de bases. Recolecta recursos, construye estructuras y expande tu base mientras exploras un mundo lleno de secretos.</li>
+                <li><b>Género:</b> Aventura, Indie, Simulación</li>
+                <li><b>Precio:</b> 19.99€</li>
+                <li><b>Valoración:</b> Muy positiva</li>
+                <li><b>Fecha de salida:</b> 18 de Abril de 2019</li>
+                <li><b>Desarrollador:</b> HopFrog</li>
+                <li><b>Editor:</b> Humble Games</li>
+                <li><b>Edad recomendada:</b> Todas las edades</li>
+            </ul>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Requisitos</th>
+                        <th>Mínimos</th>
+                        <th>Recomendados</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Sistema operativo</td>
+                        <td>Windows XP</td>
+                        <td>Windows 10</td>
+                    </tr>
+                    <tr>
+                        <td>Procesador</td>
+                        <td>Intel Core 2 Duo</td>
+                        <td>Intel i5</td>
+                    </tr>
+                    <tr>
+                        <td>RAM</td>
+                        <td>2 GB</td>
+                        <td>4 GB</td>
+                    </tr>
+                    <tr>
+                        <td>Gráficos</td>
+                        <td>512 MB VRAM</td>
+                        <td>1 GB VRAM</td>
+                    </tr>
+                    <tr>
+                        <td>Almacenamiento</td>
+                        <td>200 MB de espacio disponible</td>
+                        <td>200 MB de espacio disponible</td>
+                    </tr>
+                </tbody>
+            </table>
+            <button class="add-to-cart">Añadir al carrito</button>
+            <p><a href="https://store.steampowered.com/app/751780/Forager/?l=spanish" target="_blank">Página de Steam</a></p>
+        </div>
+
+        <div class="juego">
+            <h2>Cookie Clicker</h2>
+            <a href="https://store.steampowered.com/app/1454400/Cookie_Clicker/?l=spanish" target="_blank"><img src="img/juegos/CookieClicker.jpg" alt="Cookie Clicker"></a>
+            <ul>
+                <li><b>Descripción:</b> Cookie Clicker es un juego incremental en el que haces clic para hornear galletas y desbloquear mejoras para producir más galletas automáticamente. ¡Expande tu imperio de galletas!</li>
+                <li><b>Género:</b> Casual, Indie</li>
+                <li><b>Precio:</b> 4.99€</li>
+                <li><b>Valoración:</b> Extremadamente positiva</li>
+                <li><b>Fecha de salida:</b> 1 de Septiembre de 2021</li>
+                <li><b>Desarrollador:</b> Orteil</li>
+                <li><b>Editor:</b> Playsaurus</li>
+                <li><b>Edad recomendada:</b> Todas las edades</li>
+            </ul>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Requisitos</th>
+                        <th>Mínimos</th>
+                        <th>Recomendados</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Sistema operativo</td>
+                        <td>Windows 7</td>
+                        <td>Windows 10</td>
+                    </tr>
+                    <tr>
+                        <td>Procesador</td>
+                        <td>Doble núcleo de 2.33 GHz</td>
+                        <td>Doble núcleo de 2.33 GHz</td>
+                    </tr>
+                    <tr>
+                        <td>RAM</td>
+                        <td>1 GB</td>
+                        <td>2 GB</td>
+                    </tr>
+                    <tr>
+                        <td>Gráficos</td>
+                        <td>Compatible con DirectX 9.0</td>
+                        <td>Compatible con DirectX 9.0</td>
+                    </tr>
+                    <tr>
+                        <td>Almacenamiento</td>
+                        <td>350 MB de espacio disponible</td>
+                        <td>350 MB de espacio disponible</td>
+                    </tr>
+                </tbody>
+            </table>
+            <button class="add-to-cart">Añadir al carrito</button>
+            <p><a href="https://store.steampowered.com/app/1454400/Cookie_Clicker/?l=spanish" target="_blank">Página de Steam</a></p>
+        </div>
+
+        <div class="juego">
+            <h2>Papers, Please</h2>
+            <a href="https://store.steampowered.com/app/239030/Papers_Please/?l=spanish" target="_blank"><img src="img/juegos/PapersPlease.jpg" alt="Papers, Please"></a>
+            <ul>
+                <li><b>Descripción:</b> Papers, Please es un juego de simulación en el que trabajas como inspector de inmigración en un estado distópico. Examina documentos y toma decisiones que afectarán la vida de las personas y el destino de tu familia.</li>
+                <li><b>Género:</b> Indie, Simulación</li>
+                <li><b>Precio:</b> 9.75€</li>
+                <li><b>Valoración:</b> Extremadamente positiva</li>
+                <li><b>Fecha de salida:</b> 8 de Agosto de 2013</li>
+                <li><b>Desarrollador:</b> Lucas Pope</li>
+                <li><b>Editor:</b> 3909</li>
+                <li><b>Edad recomendada:</b> Mayores de 16 años</li>
+            </ul>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Requisitos</th>
+                        <th>Mínimos</th>
+                        <th>Recomendados</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Sistema operativo</td>
+                        <td>Windows XP</td>
+                        <td>Windows 7</td>
+                    </tr>
+                    <tr>
+                        <td>Procesador</td>
+                        <td>1.5 GHz Core2Duo</td>
+                        <td>2.0 GHz Core2Duo</td>
+                    </tr>
+                    <tr>
+                        <td>RAM</td>
+                        <td>2 GB</td>
+                        <td>4 GB</td>
+                    </tr>
+                    <tr>
+                        <td>Gráficos</td>
+                        <td>OpenGL 1.4 compatible</td>
+                        <td>OpenGL 2.0 compatible</td>
+                    </tr>
+                    <tr>
+                        <td>Almacenamiento</td>
+                        <td>100 MB de espacio disponible</td>
+                        <td>100 MB de espacio disponible</td>
+                    </tr>
+                </tbody>
+            </table>
+            <button class="add-to-cart">Añadir al carrito</button>
+            <p><a href="https://store.steampowered.com/app/239030/Papers_Please/?l=spanish" target="_blank">Página de Steam</a></p>
+        </div>
+
+        <div class="juego">
+            <h2>Inscryption</h2>
+            <a href="https://store.steampowered.com/app/1092790/Inscryption/?l=spanish" target="_blank"><img src="img/juegos/Inscryption.jpg" alt="Inscryption"></a>
+            <ul>
+                <li><b>Descripción:</b> Inscryption es un juego de construcción de mazos que combina elementos de roguelike, rompecabezas y terror psicológico. Adéntrate en una experiencia única llena de misterios y sorpresas.</li>
+                <li><b>Género:</b> Indie, Estrategia</li>
+                <li><b>Precio:</b> 19.99€</li>
+                <li><b>Valoración:</b> Extremadamente positiva</li>
+                <li><b>Fecha de salida:</b> 19 de Octubre de 2021</li>
+                <li><b>Desarrollador:</b> Daniel Mullins Games</li>
+                <li><b>Editor:</b> Devolver Digital</li>
+                <li><b>Edad recomendada:</b> Mayores de 16 años</li>
+            </ul>
+            <table>
+                <thead>
+                    <tr>
+                    <th>Requisitos</th>
+                    <th>Mínimos</th>
+                    <th>Recomendados</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Sistema operativo</td>
+                        <td>Windows 7</td>
+                        <td>Windows 10</td>
+                    </tr>
+                    <tr>
+                        <td>Procesador</td>
+                        <td>Intel Core i5</td>
+                        <td>Intel Core i7</td>
+                    </tr>
+                    <tr>
+                        <td>RAM</td>
+                        <td>8 GB</td>
+                        <td>16 GB</td>
+                    </tr>
+                    <tr>
+                        <td>Gráficos</td>
+                        <td>NVIDIA GTX 650</td>
+                        <td>NVIDIA GTX 970</td>
+                    </tr>
+                    <tr>
+                        <td>Almacenamiento</td>
+                        <td>2 GB de espacio disponible</td>
+                        <td>2 GB de espacio disponible</td>
+                    </tr>
+                </tbody>
+            </table>
+            <button class="add-to-cart">Añadir al carrito</button>
+            <p><a href="https://store.steampowered.com/app/1092790/Inscryption/?l=spanish" target="_blank">Página de Steam</a></p>
+        </div>
+
+        <div class="juego">
+            <h2>Project Zomboid</h2>
+            <a href="https://store.steampowered.com/app/108600/Project_Zomboid/?l=spanish" target="_blank"><img src="img/juegos/ProjectZomboid.jpg" alt="Project Zomboid"></a>
+            <ul>
+                <li><b>Descripción:</b> Project Zomboid es un juego de supervivencia en mundo abierto donde debes sobrevivir en un apocalipsis zombi. Recolecta recursos, construye refugios y enfrenta desafíos mientras intentas sobrevivir el mayor tiempo posible.</li>
+                <li><b>Género:</b> Indie, Simulación, Supervivencia</li>
+                <li><b>Precio:</b> 19.50€</li>
+                <li><b>Valoración:</b> Muy positiva</li>
+                <li><b>Fecha de salida:</b> 8 de Noviembre de 2013</li>
+                <li><b>Desarrollador:</b> The Indie Stone</li>
+                <li><b>Editor:</b> The Indie Stone</li>
+                <li><b>Edad recomendada:</b> Mayores de 16 años</li>
+            </ul>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Requisitos</th>
+                        <th>Mínimos</th>
+                        <th>Recomendados</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Sistema operativo</td>
+                        <td>Windows 10</td>
+                        <td>Windows 10</td>
+                    </tr>
+                    <tr>
+                        <td>Procesador</td>
+                        <td>Intel Core 2 Duo 2.77GHz</td>
+                        <td>Intel i5 2.9GHz</td>
+                    </tr>
+                    <tr>
+                        <td>RAM</td>
+                        <td>4 GB</td>
+                        <td>8 GB</td>
+                    </tr>
+                    <tr>
+                        <td>Gráficos</td>
+                        <td>NVIDIA GeForce 8600</td>
+                        <td>NVIDIA GTX 660</td>
+                    </tr>
+                    <tr>
+                        <td>Almacenamiento</td>
+                        <td>3 GB de espacio disponible</td>
+                        <td>3 GB de espacio disponible</td>
+                    </tr>
+                </tbody>
+            </table>
+            <button class="add-to-cart">Añadir al carrito</button>
+            <p><a href="https://store.steampowered.com/app/108600/Project_Zomboid/?l=spanish" target="_blank">Página de Steam</a></p>
+        </div>
+
+        <div class="juego">
+            <h2>Undertale</h2>
+            <a href="https://store.steampowered.com/app/391540/Undertale/?l=spanish" target="_blank"><img src="img/juegos/Undertale.jpg" alt="Undertale"></a>
+            <ul>
+                <li><b>Descripción:</b> Undertale es un juego de rol donde no tienes que matar a nadie. Explora un mundo subterráneo lleno de personajes únicos y toma decisiones que afectarán la historia.</li>
+                <li><b>Género:</b> Indie, Rol</li>
+                <li><b>Precio:</b> 9.99€</li>
+                <li><b>Valoración:</b> Extremadamente positiva</li>
+                <li><b>Fecha de salida:</b> 15 de Septiembre de 2015</li>
+                <li><b>Desarrollador:</b> tobyfox</li>
+                <li><b>Editor:</b> tobyfox</li>
+                <li><b>Edad recomendada:</b> Todas las edades</li>
+            </ul>
+            <table>
+            <thead>
+                <tr>
+                    <th>Requisitos</th>
+                    <th>Mínimos</th>
+                    <th>Recomendados</th>
+                </tr>
+            </thead>
+                <tbody>
+                    <tr>
+                        <td>Sistema operativo</td>
+                        <td>Windows XP, Vista, 7, 8, 10</td>
+                        <td>Windows 7, 8, 10</td>
+                    </tr>
+                    <tr>
+                        <td>Procesador</td>
+                        <td>2 GHz</td>
+                        <td>2 GHz</td>
+                    </tr>
+                    <tr>
+                        <td>RAM</td>
+                        <td>2 GB</td>
+                        <td>4 GB</td>
+                    </tr>
+                    <tr>
+                        <td>Gráficos</td>
+                        <td>128 MB VRAM</td>
+                        <td>128 MB VRAM</td>
+                    </tr>
+                    <tr>
+                        <td>Almacenamiento</td>
+                        <td>200 MB de espacio disponible</td>
+                        <td>200 MB de espacio disponible</td>
+                    </tr>
+                </tbody>
+            </table>
+            <button class="add-to-cart">Añadir al carrito</button>
+            <p><a href="https://store.steampowered.com/app/391540/Undertale/?l=spanish" target="_blank">Página de Steam</a></p>
+        </div>
+
+        <div class="juego">
+            <h2>Blade And Sorcery</h2>
+            <a href="https://store.steampowered.com/app/629730/Blade_and_Sorcery/?l=spanish" target="_blank"><img src="img/juegos/BladeAndSorcery.jpg" alt="Blade And Sorcery"></a>
+            <ul>
+                <li><b>Descripción:</b> Blade And Sorcery es un juego de combate en realidad virtual con físicas avanzadas. Experimenta batallas cuerpo a cuerpo, a distancia y mágicas en un entorno sandbox.</li>
+                <li><b>Género:</b> Acción, Indie, Simulación</li>
+                <li><b>Precio:</b> 29.99€</li>
+                <li><b>Valoración:</b> Muy positiva</li>
+                <li><b>Fecha de salida:</b> 17 de Junio de 2024</li>
+                <li><b>Desarrollador:</b> WarpFrog</li>
+                <li><b>Editor:</b> WarpFrog</li>
+                <li><b>Edad recomendada:</b> Mayores de 16 años</li>
+            </ul>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Requisitos</th>
+                        <th>Mínimos</th>
+                        <th>Recomendados</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Sistema operativo</td>
+                        <td>Windows 10</td>
+                        <td>Windows 10</td>
+                    </tr>
+                    <tr>
+                        <td>Procesador</td>
+                        <td>Intel i5-4590 / AMD FX 8350</td>
+                        <td>Intel i7-9700K / AMD Ryzen 5 3600</td>
+                    </tr>
+                    <tr>
+                        <td>RAM</td>
+                        <td>8 GB</td>
+                        <td>16 GB</td>
+                    </tr>
+                    <tr>
+                        <td>Gráficos</td>
+                        <td>NVIDIA GTX 970 / AMD RX 480</td>
+                        <td>NVIDIA RTX 2060 / AMD RX 5700</td>
+                    </tr>
+                    <tr>
+                        <td>Almacenamiento</td>
+                        <td>20 GB de espacio disponible</td>
+                        <td>20 GB de espacio disponible</td>
+                    </tr>
+                </tbody>
+            </table>
+            <button class="add-to-cart">Añadir al carrito</button>
+            <p><a href="https://store.steampowered.com/app/629730/Blade_and_Sorcery/?l=spanish" target="_blank">Página de Steam</a></p>
+        </div>
+
+        <div class="juego">
+            <h2>Ultrakill</h2>
+            <a href="https://store.steampowered.com/app/1229490/ULTRAKILL/?l=spanish" target="_blank"><img src="img/juegos/Ultrakill.jpg" alt="Ultrakill"></a>
+            <ul>
+                <li><b>Descripción:</b> Ultrakill es un frenético juego de disparos en primera persona que combina mecánicas de FPS clásicos con un sistema de combate basado en combos y estilo.</li>
+                <li><b>Género:</b> Acción, Indie</li>
+                <li><b>Precio:</b> 23.99€</li>
+                <li><b>Valoración:</b> Extremadamente positiva</li>
+                <li><b>Fecha de salida:</b> 3 de Septiembre de 2020</li>
+                <li><b>Desarrollador:</b> Arsi "Hakita" Patala</li>
+                <li><b>Editor:</b> New Blood Interactive</li>
+                <li><b>Edad recomendada:</b> Mayores de 16 años</li>
+            </ul>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Requisitos</th>
+                        <th>Mínimos</th>
+                        <th>Recomendados</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Sistema operativo</td>
+                        <td>Windows 7</td>
+                        <td>Windows 10</td>
+                    </tr>
+                    <tr>
+                        <td>Procesador</td>
+                        <td>Intel Core 2 Duo E8400</td>
+                        <td>Intel Core i5-4690K</td>
+                    </tr>
+                    <tr>
+                        <td>RAM</td>
+                        <td>2 GB</td>
+                        <td>4 GB</td>
+                    </tr>
+                    <tr>
+                        <td>Gráficos</td>
+                        <td>GeForce GTX 460</td>
+                        <td>GeForce GTX 970</td>
+                    </tr>
+                    <tr>
+                        <td>Almacenamiento</td>
+                        <td>2 GB de espacio disponible</td>
+                        <td>2 GB de espacio disponible</td>
+                    </tr>
+                </tbody>
+            </table>
+            <button class="add-to-cart">Añadir al carrito</button>
+            <p><a href="https://store.steampowered.com/app/1229490/ULTRAKILL/?l=spanish" target="_blank">Página de Steam</a></p>
+        </div>
+
+        <div class="juego">
+            <h2>Hollow Knight</h2>
+            <a href="https://store.steampowered.com/app/367520/Hollow_Knight/?l=spanish" target="_blank"><img src="img/juegos/HollowKnight.jpg" alt="Hollow Knight"></a>
+            <ul>
+                <li><b>Descripción:</b> Hollow Knight es un juego de acción y aventuras en 2D que te lleva a explorar un vasto mundo subterráneo lleno de insectos y misterios.</li>
+                <li><b>Género:</b> Acción, Aventura, Indie</li>
+                <li><b>Precio:</b> 14.79€</li>
+                <li><b>Valoración:</b> Extremadamente positiva</li>
+                <li><b>Fecha de salida:</b> 24 de Febrero de 2017</li>
+                <li><b>Desarrollador:</b> Team Cherry</li>
+                <li><b>Editor:</b> Team Cherry</li>
+                <li><b>Edad recomendada:</b> Todas las edades</li>
+            </ul>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Requisitos</th>
+                        <th>Mínimos</th>
+                        <th>Recomendados</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>Sistema operativo</td>
+                        <td>Windows 7</td>
+                        <td>Windows 10</td>
+                    </tr>
+                    <tr>
+                        <td>Procesador</td>
+                        <td>Intel Core 2 Duo E5200</td>
+                        <td>Intel Core i5</td>
+                    </tr>
+                    <tr>
+                        <td>RAM</td>
+                        <td>4 GB</td>
+                        <td>8 GB</td>
+                    </tr>
+                    <tr>
+                        <td>Gráficos</td>
+                        <td>GeForce 9800GTX</td>
+                        <td>GeForce GTX 560</td>
+                    </tr>
+                    <tr>
+                        <td>Almacenamiento</td>
+                        <td>9 GB de espacio disponible</td>
+                        <td>9 GB de espacio disponible</td>
+                    </tr>
+                </tbody>
+            </table>
+            <button class="add-to-cart">Añadir al carrito</button>
+            <p><a href="https://store.steampowered.com/app/367520/Hollow_Knight/?l=spanish" target="_blank">Página de Steam</a></p>
+        </div>
+
+        <div class="juego">
+            <h2>Celeste</h2>
+            <a href="https://store.steampowered.com/app/504230/Celeste/?l=spanish" target="_blank"><img src="img/juegos/Celeste.jpg" alt="Celeste"></a>
+            <ul>
+                <li><b>Descripción:</b> Celeste es un desafiante juego de plataformas en el que ayudas a Madeline a escalar la montaña Celeste mientras enfrentas obstáculos y descubres una emotiva historia.</li>
+                <li><b>Género:</b> Indie, Plataformas</li>
+                <li><b>Precio:</b> 19.50€</li>
+                <li><b>Valoración:</b> Extremadamente positiva</li>
+                <li><b>Fecha de salida:</b> 25 de Enero de 2018</li>
+                <li><b>Desarrollador:</b> Maddy Makes Games</li>
+                <li><b>Editor:</b> Maddy Makes Games</li>
+                <li><b>Edad recomendada:</b> Todas las edades</li>
+            </ul>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Requisitos</th>
+                        <th>Mínimos</th>
+                        <th>Recomendados</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Sistema operativo</td>
+                        <td>Windows 7</td>
+                        <td>Windows 10</td>
+                    </tr>
+                    <tr>
+                        <td>Procesador</td>
+                        <td>Intel Core i3 M380</td>
+                        <td>Intel Core i5</td>
+                    </tr>
+                    <tr>
+                        <td>RAM</td>
+                        <td>2 GB</td>
+                        <td>4 GB</td>
+                    </tr>
+                    <tr>
+                        <td>Gráficos</td>
+                        <td>Intel HD 4000</td>
+                        <td>GeForce GTX 960</td>
+                    </tr>
+                    <tr>
+                        <td>Almacenamiento</td>
+                        <td>1.2 GB de espacio disponible</td>
+                        <td>1.2 GB de espacio disponible</td>
+                    </tr>
+                </tbody>
+            </table>
+            <button class="add-to-cart">Añadir al carrito</button>
+            <p><a href="https://store.steampowered.com/app/504230/Celeste/?l=spanish" target="_blank">Página de Steam</a></p>
+        </div>
+
+        <div class="juego">
+            <h2>Dead Cells</h2>
+            <a href="https://store.steampowered.com/app/588650/Dead_Cells/?l=spanish" target="_blank"><img src="img/juegos/DeadCells.jpg" alt="Dead Cells"></a>
+            <ul>
+                <li><b>Descripción:</b> Dead Cells es un juego de acción y plataformas roguelike en el que exploras un castillo en constante cambio mientras enfrentas enemigos y mejoras tus habilidades.</li>
+                <li><b>Género:</b> Acción, Indie, Roguelike</li>
+                <li><b>Precio:</b> 24.99€</li>
+                <li><b>Valoración:</b> Extremadamente positiva</li>
+                <li><b>Fecha de salida:</b> 7 de Agosto de 2018</li>
+                <li><b>Desarrollador:</b> Motion Twin</li>
+                <li><b>Editor:</b> Motion Twin</li>
+                <li><b>Edad recomendada:</b> Mayores de 12 años</li>
+            </ul>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Requisitos</th>
+                        <th>Mínimos</th>
+                        <th>Recomendados</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Sistema operativo</td>
+                        <td>Windows 7</td>
+                        <td>Windows 10</td>
+                    </tr>
+                    <tr>
+                        <td>Procesador</td>
+                        <td>Intel i5</td>
+                        <td>Intel i7</td>
+                    </tr>
+                    <tr>
+                        <td>RAM</td>
+                        <td>2 GB</td>
+                        <td>4 GB</td>
+                    </tr>
+                    <tr>
+                        <td>Gráficos</td>
+                        <td>GeForce GTX 460</td>
+                        <td>GeForce GTX 970</td>
+                    </tr>
+                    <tr>
+                        <td>Almacenamiento</td>
+                        <td>500 MB de espacio disponible</td>
+                        <td>500 MB de espacio disponible</td>
+                    </tr>
+                </tbody>
+            </table>
+            <button class="add-to-cart">Añadir al carrito</button>
+            <p><a href="https://store.steampowered.com/app/588650/Dead_Cells/?l=spanish" target="_blank">Página de Steam</a></p>
+        </div>
+
+        <div class="juego">
+            <h2>Stardew Valley</h2>
+            <a href="https://store.steampowered.com/app/413150/Stardew_Valley/?l=spanish" target="_blank"><img src="img/juegos/StardewValley.jpg" alt="Stardew Valley"></a>
+            <ul>
+                <li><b>Descripción:</b> Stardew Valley es un juego de simulación en el que heredas una granja y debes cultivarla, criar animales y formar relaciones con los habitantes del pueblo.</li>
+                <li><b>Género:</b> Indie, Simulación, Rol</li>
+                <li><b>Precio:</b> 13.99€</li>
+                <li><b>Valoración:</b> Extremadamente positiva</li>
+                <li><b>Fecha de salida:</b> 26 de Febrero de 2016</li>
+                <li><b>Desarrollador:</b> ConcernedApe</li>
+                <li><b>Editor:</b> ConcernedApe</li>
+                <li><b>Edad recomendada:</b> Todas las edades</li>
+            </ul>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Requisitos</th>
+                        <th>Mínimos</th>
+                        <th>Recomendados</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Sistema operativo</td>
+                        <td>Windows 7</td>
+                        <td>Windows 10</td>
+                    </tr>
+                    <tr>
+                        <td>Procesador</td>
+                        <td>Intel Core 2 Duo</td>
+                        <td>Intel Core i5</td>
+                    </tr>
+                    <tr>
+                        <td>RAM</td>
+                        <td>2 GB</td>
+                        <td>4 GB</td>
+                    </tr>
+                    <tr>
+                        <td>Gráficos</td>
+                        <td>256 MB VRAM</td>
+                        <td>512 MB VRAM</td>
+                    </tr>
+                    <tr>
+                        <td>Almacenamiento</td>
+                        <td>500 MB de espacio disponible</td>
+                        <td>500 MB de espacio disponible</td>
+                    </tr>
+                </tbody>
+            </table>
+            <button class="add-to-cart">Añadir al carrito</button>
+            <p><a href="https://store.steampowered.com/app/413150/Stardew_Valley/?l=spanish" target="_blank">Página de Steam</a></p>
+        </div>
+
+        <div class="juego">
+            <h2>Omori</h2>
+            <a href="https://store.steampowered.com/app/1150690/OMORI/?l=spanish" target="_blank"><img src="img/juegos/Omori.jpg" alt="Omori"></a>
+            <ul>
+                <li><b>Descripción:</b> Omori es un juego de rol psicológico que explora temas de amistad, pérdida y superación personal en un mundo surrealista lleno de emociones.</li>
+                <li><b>Género:</b> Indie, Rol</li>
+                <li><b>Precio:</b> 16.79€</li>
+                <li><b>Valoración:</b> Extremadamente positiva</li>
+                <li><b>Fecha de salida:</b> 25 de Diciembre de 2020</li>
+                <li><b>Desarrollador:</b> OMOCAT, LLC</li>
+                <li><b>Editor:</b> OMOCAT, LLC</li>
+                <li><b>Edad recomendada:</b> Mayores de 12 años</li>
+            </ul>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Requisitos</th>
+                        <th>Mínimos</th>
+                        <th>Recomendados</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Sistema operativo</td>
+                        <td>Windows 8</td>
+                        <td>Windows 10</td>
+                    </tr>
+                    <tr>
+                        <td>Procesador</td>
+                        <td>Intel N4100</td>
+                        <td>Intel i3</td>
+                    </tr>
+                    <tr>
+                        <td>RAM</td>
+                        <td>4 GB</td>
+                        <td>8 GB</td>
+                    </tr>
+                    <tr>
+                        <td>Gráficos</td>
+                        <td>Intel UHD 600</td>
+                        <td>GeForce GTX 660</td>
+                    </tr>
+                    <tr>
+                        <td>Almacenamiento</td>
+                        <td>2 GB de espacio disponible</td>
+                        <td>2 GB de espacio disponible</td>
+                    </tr>
+                </tbody>
+            </table>
+            <button class="add-to-cart">Añadir al carrito</button>
+            <p><a href="https://store.steampowered.com/app/1150690/OMORI/?l=spanish" target="_blank">Página de Steam</a></p>
+        </div></div>
+
+
+    </section>
+    </main>
+
+    <footer>
+        <div class="logo">
+            <img src="img/logo.png" alt="Logo de la Empresa" width="100">
+        </div>
+        <p>&copy; 2025 IndieGameViewer</p>
+        <p>Creado por: Javier Martín Cruz (1ºDAW)</p>
+
+        <br>
+        <div class="disclaimer">
+            <h3>Descargo de Responsabilidad</h3>
+            <p>Ten en cuenta que el carrito de esta página SOLO CALCULA EL PRECIO de los juegos en el carrito y no sirve para comprar los juegos seleccionados</p>
+            <p>Este proyecto es un trabajo académico y no tiene fines comerciales.</p>
+            <p>Este proyecto fue desarrollado como parte de un curso de Desarrollo Web.</p>
+            <p>Los derechos de autor de los juegos mostrados pertenecen a sus respectivos propietarios.</p>
+            <p>Este proyecto no está afiliado a ninguna empresa o entidad relacionada con los juegos mostrados.</p>
+            <p>Este proyecto es una demostración de habilidades en HTML, CSS, XML, DTD, XSLT y JavaScript.</p>
+            <p>El uso de imágenes y nombres de juegos es puramente ilustrativo y no implica ningún tipo de asociación.</p>
+            <p>Este proyecto no tiene fines de lucro y se realiza con fines educativos.</p>
+            <p>Este proyecto es un trabajo individual y no representa la opinión de ninguna institución.</p>
+            <p>Si tienes alguna pregunta o inquietud, no dudes en ponerte en contacto con el autor.</p>
+            <p>El logo fue creado por ChatGPT.</p>
+            <p>Gracias por tu comprensión y apoyo.</p>
+            <p>¡Disfruta de los juegos!</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

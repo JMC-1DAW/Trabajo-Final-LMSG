@@ -1,0 +1,606 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo semitransparente */
+    color: white;
+    padding: 10px;
+}
+
+/* Estilos para los desplegables */
+nav select {
+    margin-right: 10px;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    color: #333;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+nav select:hover {
+    background-color: #e6e6e6;
+    border-color: #aaa;
+}
+
+nav select:focus {
+    outline: none;
+    border-color: #0078d7;
+    box-shadow: 0 0 5px rgba(0, 120, 215, 0.5);
+}
+
+#user-info {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espacio entre el texto y el botón */
+}
+
+#user-info span {
+    font-size: 14px;
+    color: white;
+}
+
+#user-info button {
+    background-color: #444;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#user-info button:hover {
+    background-color: #666;
+}
+
+#user-form {
+    position: absolute;
+    top: 50px; /* Ajusta la posición vertical */
+    right: 10px; /* Alinea a la derecha */
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo semitransparente */
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Sombra */
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+}
+
+#user-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+#user-form input {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#user-form button {
+    background-color: #444;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100%;
+}
+
+#user-form button:hover {
+    background-color: #666;
+}
+
+#top-juegos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+main {
+    padding: 20px;
+}
+
+main section {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #dddddd;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+main section ul {
+    list-style: disc;
+    padding-left: 20px;
+}
+
+main section ul li {
+    margin-bottom: 5px;
+}
+
+main section ul li a {
+    color: rgb(10, 149, 184);
+    text-decoration: none;
+}
+
+main section ul li a:hover {
+    text-decoration: underline;
+}
+
+.juego {
+    width: 75%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    border: 2px double #333;
+    border-radius: 10px;
+    padding: 2%;
+    background-color: white;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Sombra sutil */
+}
+
+.juego h2 {
+    text-align: center;
+    font-size: 50px;
+    margin-bottom: 15px;
+    color: inherit;
+}
+
+.juego img {
+    width: 500px;
+    height: auto;
+    display: block;
+    margin: 0 auto 15px;
+    border-radius: 10px;
+    border: 5px solid transparent;
+    transition: border-color 0.3s ease;
+}
+
+.juego ul {
+    list-style: none;
+    padding: 0;
+}
+
+.juego li {
+    margin-bottom: 5px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 5px;
+    text-align: left;
+}
+
+a {
+    color: rgb(10, 149, 184);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px; /* Espacio entre el logo y el copyright */
+}
+
+.logo-empresa img {
+    width: 100px;
+    height: auto;
+}
+
+.disclaimer {
+    font-size: 10px;
+    color: #666;
+    margin-top: 10px;
+}
+
+/* Estilos para temas (se aplicarán con JavaScript) */
+.tema-oscuro {
+    background-color: #333;
+    color: white;
+}
+
+.tema-oscuro .juego {
+    width: 75%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    border: 2px double white;
+    border-radius: 10px;
+    padding: 2%;
+    background-color: rgb(65, 65, 65);
+    color: white;
+    box-shadow: 2px 2px 5px rgba(255, 255, 255, 0.3); /* Sombra sutil */
+}
+
+.tema-oscuro main section {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #0c0c0c;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.tema-claro {
+    background-color: #f0f0f0;
+}
+
+.tema-claro .juego {
+    width: 75%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    border: 2px double #333;
+    border-radius: 10px;
+    padding: 2%;
+    background-color: white;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Sombra sutil */
+}
+
+.tema-claro main section {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #dddddd;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Tema vacío (morados oscuros) */
+.tema-vacio {
+    background-color: #2a003e; /* Fondo morado oscuro */
+    color: #d9b3ff; /* Texto morado claro */
+}
+
+.tema-vacio .juego {
+    width: 75%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    border: 2px solid #7a00cc; /* Borde morado brillante */
+    border-radius: 10px;
+    padding: 2%;
+    background-color: #3e0059; /* Fondo morado intermedio */
+    color: #d9b3ff; /* Texto morado claro */
+    box-shadow: 2px 2px 5px rgba(122, 0, 204, 0.5); /* Sombra morada */
+}
+
+.tema-vacio main section {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #3e0059; /* Fondo morado intermedio */
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(122, 0, 204, 0.5); /* Sombra morada */
+}
+
+/* Tema dorado (dorados suaves y claros) */
+.tema-dorado {
+    background-color: #fff8e1; /* Fondo dorado claro */
+    color: #b8860b; /* Texto dorado oscuro */
+}
+
+.tema-dorado .juego {
+    width: 75%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    border: 2px solid #daa520; /* Borde dorado */
+    border-radius: 10px;
+    padding: 2%;
+    background-color: #fff4c2; /* Fondo dorado suave */
+    color: #b8860b; /* Texto dorado oscuro */
+    box-shadow: 2px 2px 5px rgba(218, 165, 32, 0.5); /* Sombra dorada */
+}
+
+.tema-dorado main section {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #fff4c2; /* Fondo dorado suave */
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(218, 165, 32, 0.5); /* Sombra dorada */
+}
+
+/* Estilo general para enlaces */
+a {
+    display: block; /* Para que se comporten como elementos de bloque */
+    text-align: center; /* Centra el texto dentro del contenedor */
+    font-weight: bold;
+    text-decoration: none;
+    margin: 10px auto; /* Espaciado vertical y centrado horizontal */
+    transition: color 0.3s ease; /* Transición suave para cambios de color */
+}
+
+/* Tema oscuro */
+.tema-oscuro a {
+    color: #1e90ff; /* Azul claro */
+}
+
+.tema-oscuro a:hover {
+    color: #87cefa; /* Azul más claro al pasar el cursor */
+}
+
+/* Tema claro */
+.tema-claro a {
+    color: #0078d7; /* Azul llamativo */
+}
+
+.tema-claro a:hover {
+    color: #005bb5; /* Azul más oscuro al pasar el cursor */
+}
+
+/* Tema vacío */
+.tema-vacio a {
+    color: #d9b3ff; /* Morado claro */
+}
+
+.tema-vacio a:hover {
+    color: #b886f7; /* Morado más brillante al pasar el cursor */
+}
+
+/* Tema dorado */
+.tema-dorado a {
+    color: #b8860b; /* Dorado oscuro */
+}
+
+.tema-dorado a:hover {
+    color: #daa520; /* Dorado más brillante al pasar el cursor */
+}
+
+/* Estilos para el botón de tema */
+#boton-tema {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background-color: #444;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Estilo general para el botón "Añadir al carrito" */
+.add-to-cart {
+    display: block; /* Para centrarlo horizontalmente */
+    margin: 20px auto; /* Centrado horizontal y separación vertical */
+    padding: 12px 20px; /* Tamaño del botón */
+    font-size: 16px; /* Tamaño del texto */
+    font-weight: bold; /* Texto en negrita */
+    color: white; /* Color del texto */
+    background-color: #0078d7; /* Azul llamativo */
+    border: none; /* Sin bordes */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    transition: all 0.3s ease; /* Transición suave para efectos */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra para resaltar */
+}
+
+.add-to-cart:hover {
+    background-color: #005bb5; /* Azul más oscuro al pasar el cursor */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada */
+}
+
+.add-to-cart:active {
+    background-color: #003f7f; /* Azul aún más oscuro al hacer clic */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra reducida */
+    transform: translateY(2px); /* Efecto de "presionado" */
+}
+
+/* Compatibilidad con temas */
+
+/* Tema oscuro */
+.tema-oscuro .add-to-cart {
+    background-color: #242424;
+    color: white;
+}
+
+.tema-oscuro .add-to-cart:hover {
+    background-color: #666; 
+}
+
+/* Tema claro */
+.tema-claro .add-to-cart {
+    background-color: #0078d7;
+    color: white;
+}
+
+.tema-claro .add-to-cart:hover {
+    background-color: #005bb5;
+}
+
+/* Tema vacío */
+.tema-vacio .add-to-cart {
+    background-color: #7a00cc;
+    color: #d9b3ff;
+}
+
+.tema-vacio .add-to-cart:hover {
+    background-color: #5e0099;
+}
+
+/* Tema dorado */
+.tema-dorado .add-to-cart {
+    background-color: #daa520;
+    color: #fff8e1;
+}
+
+.tema-dorado .add-to-cart:hover {
+    background-color: #b8860b;
+}
+
+/* Estilo general para tablas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+    font-size: 14px;
+}
+
+th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+    text-align: center;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Tema oscuro */
+.tema-oscuro table {
+    background-color: #333;
+    color: white;
+    border-color: #444;
+}
+
+.tema-oscuro th {
+    background-color: #444;
+}
+
+.tema-oscuro tr:nth-child(even) {
+    background-color: #3a3a3a;
+}
+
+.tema-oscuro tr:hover {
+    background-color: #555;
+}
+
+/* Tema claro */
+.tema-claro table {
+    background-color: white;
+    color: #333;
+    border-color: #ccc;
+}
+
+.tema-claro th {
+    background-color: #f4f4f4;
+}
+
+.tema-claro tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.tema-claro tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Tema vacío */
+.tema-vacio table {
+    background-color: #3e0059;
+    color: #d9b3ff;
+    border-color: #7a00cc;
+}
+
+.tema-vacio th {
+    background-color: #5e0099;
+}
+
+.tema-vacio tr:nth-child(even) {
+    background-color: #4a0073;
+}
+
+.tema-vacio tr:hover {
+    background-color: #6a0099;
+}
+
+/* Tema dorado */
+.tema-dorado table {
+    background-color: #fff4c2;
+    color: #b8860b;
+    border-color: #daa520;
+}
+
+.tema-dorado th {
+    background-color: #daa520;
+    color: #fff8e1;
+}
+
+.tema-dorado tr:nth-child(even) {
+    background-color: #ffe4a1;
+}
+
+.tema-dorado tr:hover {
+    background-color: #ffd27f;
+}
+
+/* Tema oscuro */
+.tema-oscuro .juego img {
+    border-color: #444;
+}
+
+.tema-oscuro .juego img:hover {
+    border-color: #666;
+}
+
+/* Tema claro */
+.tema-claro .juego img {
+    border-color: #ccc;
+}
+
+.tema-claro .juego img:hover {
+    border-color: #aaa;
+}
+
+/* Tema vacío */
+.tema-vacio .juego img {
+    border-color: #7a00cc;
+}
+
+.tema-vacio .juego img:hover {
+    border-color: #5e0099;
+}
+
+/* Tema dorado */
+.tema-dorado .juego img {
+    border-color: #daa520;
+}
+
+.tema-dorado .juego img:hover {
+    border-color: #b8860b;
+}

@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="IndieGameViewer_TopGames.xsl"?>
+
+<?xml-model href="IndieGameViewer_TopGames.dtd" type="application/xml-dtd"?>
+
+<!--
+  Este archivo XML contiene información sobre los juegos indie más populares.
+  Cada juego tiene un título, descripción, género, precio, valoración, fecha de salida y clasificación por edades (PEGI).
+!-->
+
+<juegos>
+  <juego>
+    <titulo>Oneshot</titulo>
+    <descripcion>OneShot es un juego de aventuras y rompecabezas surrealista con perspectiva a vista de pájaro y una jugabilidad única. Tienes que guiar a un niño a través de un misterioso mundo en una misión para recuperar su sol, que murió hace mucho tiempo. El mundo sabe que existes.</descripcion>
+    <genero>Aventura, Casual, Indie</genero>
+    <precio>9.75</precio>
+    <valoracion>
+      <resenia>Extremadamente positiva</resenia>
+      <cantidad_resenias>50,000+</cantidad_resenias>
+      <porcentaje_positivo>97%</porcentaje_positivo>
+    </valoracion>
+    <fecha_salida>2016-12-09</fecha_salida>
+    <pegi>
+      <edad_recomendada>Todas las edades</edad_recomendada>
+      <apto_todo_publico>sí</apto_todo_publico>
+    </pegi>
+  </juego>
+  <juego>
+    <titulo>Terraria</titulo>
+    <descripcion>Terraria es un juego de aventuras y sandbox en 2D que te permite explorar, construir, luchar y sobrevivir en un mundo generado de manera procedural. ¡La aventura te espera!</descripcion>
+    <genero>Acción, Aventura, Indie</genero>
+    <precio>9.99</precio>
+    <valoracion>
+      <resenia>Extremadamente positiva</resenia>
+      <cantidad_resenias>900,000+</cantidad_resenias>
+      <porcentaje_positivo>98%</porcentaje_positivo>
+    </valoracion>
+    <fecha_salida>2011-05-16</fecha_salida>
+    <pegi>
+      <edad_recomendada>Todas las edades</edad_recomendada>
+      <apto_todo_publico>sí</apto_todo_publico>
+    </pegi>
+  </juego>
+  <juego>
+    <titulo>Slime Rancher</titulo>
+    <descripcion>Slime Rancher es un encantador juego de simulación en primera persona. Juega como Beatrix LeBeau, una joven ranchera que se embarca en una vida a mil años luz de la Tierra en el "Lejano, Lejano Oeste". Explora, recolecta y cría adorables slimes mientras descubres los secretos de este colorido mundo.</descripcion>
+    <genero>Aventura, Indie, Simulación</genero>
+    <precio>19.99</precio>
+    <valoracion>
+      <resenia>Extremadamente positiva</resenia>
+      <cantidad_resenias>100,000+</cantidad_resenias>
+      <porcentaje_positivo>96%</porcentaje_positivo>
+    </valoracion>
+    <fecha_salida>2017-08-01</fecha_salida>
+    <pegi>
+      <edad_recomendada>Todas las edades</edad_recomendada>
+      <apto_todo_publico>sí</apto_todo_publico>
+    </pegi>
+  </juego>
+  <juego>
+    <titulo>The Binding of Isaac: Rebirth</titulo>
+    <descripcion>The Binding of Isaac: Rebirth es un juego de acción y exploración de mazmorras generado de manera procedural. Ayuda a Isaac a escapar de su madre enfrentándote a hordas de enemigos, descubriendo secretos y recolectando objetos únicos.</descripcion>
+    <genero>Acción, Aventura, Indie</genero>
+    <precio>14.99</precio>
+    <valoracion>
+      <resenia>Extremadamente positiva</resenia>
+      <cantidad_resenias>200,000+</cantidad_resenias>
+      <porcentaje_positivo>95%</porcentaje_positivo>
+    </valoracion>
+    <fecha_salida>2014-11-04</fecha_salida>
+    <pegi>
+      <edad_recomendada>Mayores de 16 años</edad_recomendada>
+      <apto_todo_publico>no</apto_todo_publico>
+    </pegi>
+  </juego>
+  <juego>
+    <titulo>The Room Two</titulo>
+    <descripcion>The Room Two es un juego de rompecabezas en 3D que te sumerge en un mundo de misterio y exploración. Resuelve acertijos intrincados y descubre secretos ocultos mientras avanzas a través de habitaciones llenas de enigmas.</descripcion>
+    <genero>Aventura, Indie</genero>
+    <precio>4.99</precio>
+    <valoracion>
+      <resenia>Muy positiva</resenia>
+      <cantidad_resenias>20,000+</cantidad_resenias>
+      <porcentaje_positivo>92%</porcentaje_positivo>
+    </valoracion>
+    <fecha_salida>2016-07-05</fecha_salida>
+    <pegi>
+      <edad_recomendada>Todas las edades</edad_recomendada>
+      <apto_todo_publico>sí</apto_todo_publico>
+    </pegi>
+  </juego>
+  <juego>
+    <titulo>Into The Radius VR</titulo>
+    <descripcion>Into The Radius VR es un juego de supervivencia y exploración en realidad virtual ambientado en un mundo postapocalíptico lleno de misterio y peligro. Explora la zona, recolecta recursos, lucha contra enemigos y descubre los secretos de este inquietante universo.</descripcion>
+    <genero>Acción, Aventura, Indie, Simulación</genero>
+    <precio>28.99</precio>
+    <valoracion>
+      <resenia>Muy positiva</resenia>
+      <cantidad_resenias>10,000+</cantidad_resenias>
+      <porcentaje_positivo>90%</porcentaje_positivo>
+    </valoracion>
+    <fecha_salida>2020-07-20</fecha_salida>
+    <pegi>
+      <edad_recomendada>Mayores de 16 años</edad_recomendada>
+      <apto_todo_publico>no</apto_todo_publico>
+    </pegi>
+  </juego>
+  <juego>
+    <titulo>Geometry Dash</titulo>
+    <descripcion>Geometry Dash es un juego de plataformas de ritmo rápido que te desafía a saltar y volar a través de niveles peligrosos llenos de obstáculos.</descripcion>
+    <genero>Indie</genero>
+    <precio>3.99</precio>
+    <valoracion>
+      <resenia>Muy positiva</resenia>
+      <cantidad_resenias>300,000+</cantidad_resenias>
+      <porcentaje_positivo>94%</porcentaje_positivo>
+    </valoracion>
+    <fecha_salida>2014-12-22</fecha_salida>
+    <pegi>
+      <edad_recomendada>Todas las edades</edad_recomendada>
+      <apto_todo_publico>sí</apto_todo_publico>
+    </pegi>
+  </juego>
+  <juego>
+      <titulo>Dave the Diver</titulo>
+      <descripcion>Dave the Diver es un juego de aventuras casual que combina exploración submarina y gestión de un restaurante de sushi.</descripcion>
+      <genero>Aventura, Casual, Indie</genero>
+      <precio>19.99</precio>
+      <valoracion>
+          <resenia>Extremadamente positiva</resenia>
+          <cantidad_resenias>50,000+</cantidad_resenias>
+          <porcentaje_positivo>97%</porcentaje_positivo>
+      </valoracion>
+      <fecha_salida>2023-06-28</fecha_salida>
+      <pegi>
+          <edad_recomendada>Todas las edades</edad_recomendada>
+          <apto_todo_publico>sí</apto_todo_publico>
+      </pegi>
+  </juego>
+  <juego>
+      <titulo>Balatro</titulo>
+      <descripcion>Balatro es un juego de construcción de mazos roguelike que combina estrategia y humor en un mundo lleno de desafíos únicos.</descripcion>
+      <genero>Indie, Estrategia</genero>
+      <precio>14.99</precio>
+      <valoracion>
+          <resenia>Extremadamente positiva</resenia>
+          <cantidad_resenias>10,000+</cantidad_resenias>
+          <porcentaje_positivo>95%</porcentaje_positivo>
+      </valoracion>
+      <fecha_salida>2023-05-02</fecha_salida>
+      <pegi>
+          <edad_recomendada>Todas las edades</edad_recomendada>
+          <apto_todo_publico>sí</apto_todo_publico>
+      </pegi>
+  </juego>
+  <juego>
+      <titulo>Just Shapes and Beats</titulo>
+      <descripcion>Just Shapes and Beats es un juego de acción musical cooperativo basado en evitar obstáculos al ritmo de la música.</descripcion>
+      <genero>Acción, Indie</genero>
+      <precio>19.99</precio>
+      <valoracion>
+          <resenia>Extremadamente positiva</resenia>
+          <cantidad_resenias>30,000+</cantidad_resenias>
+          <porcentaje_positivo>96%</porcentaje_positivo>
+      </valoracion>
+      <fecha_salida>2018-05-31</fecha_salida>
+      <pegi>
+          <edad_recomendada>Todas las edades</edad_recomendada>
+          <apto_todo_publico>sí</apto_todo_publico>
+      </pegi>
+  </juego>
+  <juego>
+      <titulo>Forager</titulo>
+      <descripcion>Forager es un juego de mundo abierto inspirado en la exploración, la agricultura y la construcción de bases. Recolecta recursos, construye estructuras y expande tu base mientras exploras un mundo lleno de secretos.</descripcion>
+      <genero>Aventura, Indie, Simulación</genero>
+      <precio>19.99</precio>
+      <valoracion>
+          <resenia>Muy positiva</resenia>
+          <cantidad_resenias>40,000+</cantidad_resenias>
+          <porcentaje_positivo>94%</porcentaje_positivo>
+      </valoracion>
+      <fecha_salida>2019-04-18</fecha_salida>
+      <pegi>
+          <edad_recomendada>Todas las edades</edad_recomendada>
+          <apto_todo_publico>sí</apto_todo_publico>
+      </pegi>
+  </juego>
+  <juego>
+      <titulo>Cookie Clicker</titulo>
+      <descripcion>Cookie Clicker es un juego incremental en el que haces clic para hornear galletas y desbloquear mejoras para producir más galletas automáticamente. ¡Expande tu imperio de galletas!</descripcion>
+      <genero>Casual, Indie</genero>
+      <precio>4.99</precio>
+      <valoracion>
+          <resenia>Extremadamente positiva</resenia>
+          <cantidad_resenias>20,000+</cantidad_resenias>
+          <porcentaje_positivo>95%</porcentaje_positivo>
+      </valoracion>
+      <fecha_salida>2021-09-01</fecha_salida>
+      <pegi>
+          <edad_recomendada>Todas las edades</edad_recomendada>
+          <apto_todo_publico>sí</apto_todo_publico>
+      </pegi>
+  </juego>
+  <juego>
+      <titulo>Papers, Please</titulo>
+      <descripcion>Papers, Please es un juego de simulación en el que trabajas como inspector de inmigración en un estado distópico. Examina documentos y toma decisiones que afectarán la vida de las personas y el destino de tu familia.</descripcion>
+      <genero>Indie, Simulación</genero>
+      <precio>9.75</precio>
+      <valoracion>
+          <resenia>Extremadamente positiva</resenia>
+          <cantidad_resenias>50,000+</cantidad_resenias>
+          <porcentaje_positivo>96%</porcentaje_positivo>
+      </valoracion>
+      <fecha_salida>2013-08-08</fecha_salida>
+      <pegi>
+          <edad_recomendada>Mayores de 16 años</edad_recomendada>
+          <apto_todo_publico>no</apto_todo_publico>
+      </pegi>
+  </juego>
+  <juego>
+      <titulo>Inscryption</titulo>
+      <descripcion>Inscryption es un juego de construcción de mazos que combina elementos de roguelike, rompecabezas y terror psicológico. Adéntrate en una experiencia única llena de misterios y sorpresas.</descripcion>
+      <genero>Indie, Estrategia</genero>
+      <precio>19.99</precio>
+      <valoracion>
+          <resenia>Extremadamente positiva</resenia>
+          <cantidad_resenias>70,000+</cantidad_resenias>
+          <porcentaje_positivo>97%</porcentaje_positivo>
+      </valoracion>
+      <fecha_salida>2021-10-19</fecha_salida>
+      <pegi>
+          <edad_recomendada>Mayores de 16 años</edad_recomendada>
+          <apto_todo_publico>no</apto_todo_publico>
+      </pegi>
+  </juego>
+  <juego>
+      <titulo>Project Zomboid</titulo>
+      <descripcion>Project Zomboid es un juego de supervivencia en mundo abierto donde debes sobrevivir en un apocalipsis zombi. Recolecta recursos, construye refugios y enfrenta desafíos mientras intentas sobrevivir el mayor tiempo posible.</descripcion>
+      <genero>Indie, Simulación, Supervivencia</genero>
+      <precio>19.50</precio>
+      <valoracion>
+          <resenia>Muy positiva</resenia>
+          <cantidad_resenias>100,000+</cantidad_resenias>
+          <porcentaje_positivo>94%</porcentaje_positivo>
+      </valoracion>
+      <fecha_salida>2013-11-08</fecha_salida>
+      <pegi>
+          <edad_recomendada>Mayores de 16 años</edad_recomendada>
+          <apto_todo_publico>no</apto_todo_publico>
+      </pegi>
+  </juego>
+  <juego>
+      <titulo>Undertale</titulo>
+      <descripcion>Undertale es un juego de rol donde no tienes que matar a nadie. Explora un mundo subterráneo lleno de personajes únicos y toma decisiones que afectarán la historia.</descripcion>
+      <genero>Indie, Rol</genero>
+      <precio>9.99</precio>
+      <valoracion>
+          <resenia>Extremadamente positiva</resenia>
+          <cantidad_resenias>500,000+</cantidad_resenias>
+          <porcentaje_positivo>96%</porcentaje_positivo>
+      </valoracion>
+      <fecha_salida>2015-09-15</fecha_salida>
+      <pegi>
+          <edad_recomendada>Todas las edades</edad_recomendada>
+          <apto_todo_publico>sí</apto_todo_publico>
+      </pegi>
+  </juego>
+  <juego>
+      <titulo>Blade and Sorcery</titulo>
+      <descripcion>Blade and Sorcery es un juego de combate en realidad virtual con físicas avanzadas. Experimenta batallas cuerpo a cuerpo, a distancia y mágicas en un entorno sandbox.</descripcion>
+      <genero>Acción, Indie, Simulación</genero>
+      <precio>29.99</precio>
+      <valoracion>
+          <resenia>Muy positiva</resenia>
+          <cantidad_resenias>50,000+</cantidad_resenias>
+          <porcentaje_positivo>93%</porcentaje_positivo>
+      </valoracion>
+      <fecha_salida>2024-06-17</fecha_salida>
+      <pegi>
+          <edad_recomendada>Mayores de 16 años</edad_recomendada>
+          <apto_todo_publico>no</apto_todo_publico>
+      </pegi>
+  </juego>
+  <juego>
+      <titulo>ULTRAKILL</titulo>
+      <descripcion>ULTRAKILL es un frenético juego de disparos en primera persona que combina mecánicas de FPS clásicos con un sistema de combate basado en combos y estilo.</descripcion>
+      <genero>Acción, Indie</genero>
+      <precio>23.99</precio>
+      <valoracion>
+          <resenia>Extremadamente positiva</resenia>
+          <cantidad_resenias>100,000+</cantidad_resenias>
+          <porcentaje_positivo>97%</porcentaje_positivo>
+      </valoracion>
+      <fecha_salida>2020-09-03</fecha_salida>
+      <pegi>
+          <edad_recomendada>Mayores de 16 años</edad_recomendada>
+          <apto_todo_publico>no</apto_todo_publico>
+      </pegi>
+  </juego>
+  <juego>
+      <titulo>Hollow Knight</titulo>
+      <descripcion>Hollow Knight es un juego de acción y aventuras en 2D que te lleva a explorar un vasto mundo subterráneo lleno de insectos y misterios.</descripcion>
+      <genero>Acción, Aventura, Indie</genero>
+      <precio>14.79</precio>
+      <valoracion>
+          <resenia>Extremadamente positiva</resenia>
+          <cantidad_resenias>300,000+</cantidad_resenias>
+          <porcentaje_positivo>97%</porcentaje_positivo>
+      </valoracion>
+      <fecha_salida>2017-02-24</fecha_salida>
+      <pegi>
+          <edad_recomendada>Todas las edades</edad_recomendada>
+          <apto_todo_publico>sí</apto_todo_publico>
+      </pegi>
+  </juego>
+  <juego>
+      <titulo>Celeste</titulo>
+      <descripcion>Celeste es un desafiante juego de plataformas en el que ayudas a Madeline a escalar la montaña Celeste mientras enfrentas obstáculos y descubres una emotiva historia.</descripcion>
+      <genero>Indie, Plataformas</genero>
+      <precio>19.50</precio>
+      <valoracion>
+          <resenia>Extremadamente positiva</resenia>
+          <cantidad_resenias>50,000+</cantidad_resenias>
+          <porcentaje_positivo>96%</porcentaje_positivo>
+      </valoracion>
+      <fecha_salida>2018-01-25</fecha_salida>
+      <pegi>
+          <edad_recomendada>Todas las edades</edad_recomendada>
+          <apto_todo_publico>sí</apto_todo_publico>
+      </pegi>
+  </juego>
+  <juego>
+      <titulo>Dead Cells</titulo>
+      <descripcion>Dead Cells es un juego de acción y plataformas roguelike en el que exploras un castillo en constante cambio mientras enfrentas enemigos y mejoras tus habilidades.</descripcion>
+      <genero>Acción, Indie, Roguelike</genero>
+      <precio>24.99</precio>
+      <valoracion>
+          <resenia>Extremadamente positiva</resenia>
+          <cantidad_resenias>100,000+</cantidad_resenias>
+          <porcentaje_positivo>95%</porcentaje_positivo>
+      </valoracion>
+      <fecha_salida>2018-08-07</fecha_salida>
+      <pegi>
+          <edad_recomendada>Mayores de 12 años</edad_recomendada>
+          <apto_todo_publico>no</apto_todo_publico>
+      </pegi>
+  </juego>
+  <juego>
+      <titulo>Stardew Valley</titulo>
+      <descripcion>Stardew Valley es un juego de simulación en el que heredas una granja y debes cultivarla, criar animales y formar relaciones con los habitantes del pueblo.</descripcion>
+      <genero>Indie, Simulación, Rol</genero>
+      <precio>13.99</precio>
+      <valoracion>
+          <resenia>Extremadamente positiva</resenia>
+          <cantidad_resenias>400,000+</cantidad_resenias>
+          <porcentaje_positivo>98%</porcentaje_positivo>
+      </valoracion>
+      <fecha_salida>2016-02-26</fecha_salida>
+      <pegi>
+          <edad_recomendada>Todas las edades</edad_recomendada>
+          <apto_todo_publico>sí</apto_todo_publico>
+      </pegi>
+  </juego>
+  <juego>
+      <titulo>Omori</titulo>
+      <descripcion>Omori es un juego de rol psicológico que explora temas de amistad, pérdida y superación personal en un mundo surrealista lleno de emociones.</descripcion>
+      <genero>Indie, Rol</genero>
+      <precio>16.79</precio>
+      <valoracion>
+          <resenia>Extremadamente positiva</resenia>
+          <cantidad_resenias>100,000+</cantidad_resenias>
+          <porcentaje_positivo>96%</porcentaje_positivo>
+      </valoracion>
+      <fecha_salida>2020-12-25</fecha_salida>
+      <pegi>
+          <edad_recomendada>Mayores de 12 años</edad_recomendada>
+          <apto_todo_publico>no</apto_todo_publico>
+      </pegi>
+  </juego>
+</juegos>

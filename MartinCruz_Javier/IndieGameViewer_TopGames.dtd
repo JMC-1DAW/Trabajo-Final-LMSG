@@ -1,0 +1,14 @@
+<!ELEMENT juegos (juego*)>
+<!ELEMENT juego (titulo, descripcion, genero, precio, valoracion, fecha_salida, pegi)>
+<!ELEMENT titulo (#PCDATA)>
+<!ELEMENT descripcion (#PCDATA)>
+<!ELEMENT genero (#PCDATA)>
+<!ELEMENT precio (#PCDATA)>
+<!ELEMENT valoracion (resenia, cantidad_resenias, porcentaje_positivo)>
+<!ELEMENT resenias (#PCDATA)>
+<!ELEMENT cantidad_resenias (#PCDATA)>
+<!ELEMENT porcentaje_positivo (#PCDATA)>
+<!ELEMENT fecha_salida (#PCDATA)>
+<!ELEMENT pegi (edad_recomendada, apto_todo_publico)>
+<!ELEMENT edad_recomendada (#PCDATA)>
+<!ELEMENT apto_todo_publico (#PCDATA)>

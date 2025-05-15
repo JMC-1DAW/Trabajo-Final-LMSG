@@ -6,16 +6,21 @@ HTML:
 
 	- Las imágenes enlazarán a los productos en la tienda de Steam	
 
-	- Cada juego mostrado estará en un div y cada uno tendrá su imagen y una lista con cosas como "descripción", "género", "precio", "valoración", "fecha de salida" y "Edad recomendada", entre otros. También una tabla con sus requisitos técnicos mínimos y recomendados
+	- Cada juego mostrado estará en un div y cada uno tendrá su imagen y 
+	una lista con cosas como "descripción", "género", "precio", "valoración", 
+	"fecha de salida" y "Edad recomendada", entre otros. También una tabla con 
+	sus requisitos técnicos mínimos y recomendados
 
-	- Que el menú sea un desplegable con varias opciones que sean cosas como "Top mejores juegos", "Tema de color" y "Carrito", entre otros
+	- Que el menú sea un desplegable con varias opciones que sean cosas como 
+	"Top mejores juegos", "Tema de color" y "Carrito", entre otros
 
 
 CSS:
 
 	- El fondo será una imagen en repetición, seguramente de Steam
 
-	- Las imágenes, divs, tablas y listas tendrán un borde y algún que otro detalle cada una
+	- Las imágenes, divs, tablas y listas tendrán un borde y 
+	algún que otro detalle cada una
 
 	- Los links tendrán un color personalizado y estarán en negrita
 
@@ -46,7 +51,8 @@ XSLT:
 
 	- Será la página "Top mejores juegos"
 
-	- Ordenará los juegos según su cantidad de reseñas positivas (Cantidad de reseñas / porcentaje positivo)
+	- Ordenará los juegos según su cantidad de reseñas positivas 
+	(Cantidad de reseñas / porcentaje positivo)
 
 	- Mostrará los 10 mejores juegos, aunque hayan más en la lista
 
@@ -54,10 +60,13 @@ XSLT:
 
 JavaScript:
 
-	- Pedir nombre y edad justo al entrar en la página y te dará un mensaje de bienvenida al introducirlos	
+	- Pedir nombre y edad justo al entrar en la página y 
+	te dará un mensaje de bienvenida al introducirlos	
 		· Si eres mayor de edad, la página no hace nada más
-		· Si eres menor de edad, la página te dará un aviso y ocultará todos los juegos cuya "Edad recomendada" sea "mayor de 18" (?)
+		· Si eres menor de edad, la página te dará un aviso y ocultará 
+		todos los juegos cuya "Edad recomendada" sea "mayor de 18" (?)
 
 	- Poner un sistema para personalizar el tema de color de la web
 	
-	- Poner un carrito para sumar los precios de los juegos en total según steam (pero no los podrás comprar)
+	- Poner un carrito para sumar los precios de los juegos en total 
+	según steam (pero no los podrás comprar)
