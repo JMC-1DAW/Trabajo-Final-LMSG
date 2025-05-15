@@ -76,8 +76,7 @@
 
             <br>
             <div class="disclaimer">
-                <h3>Descargo de Responsabilidad</h3>
-                <p>Ten en cuenta que el carrito de esta página SOLO CALCULA EL PRECIO de los juegos en el carrito y no sirve para comprar los juegos seleccionados</p>
+                <h3>Descargo de Responsabilidad:</h3>
                 <p>Este proyecto es un trabajo académico y no tiene fines comerciales.</p>
                 <p>Este proyecto fue desarrollado como parte de un curso de Desarrollo Web.</p>
                 <p>Los derechos de autor de los juegos mostrados pertenecen a sus respectivos propietarios.</p>
@@ -86,7 +85,10 @@
                 <p>El uso de imágenes y nombres de juegos es puramente ilustrativo y no implica ningún tipo de asociación.</p>
                 <p>Este proyecto no tiene fines de lucro y se realiza con fines educativos.</p>
                 <p>Este proyecto es un trabajo individual y no representa la opinión de ninguna institución.</p>
-                <p>Si tienes alguna pregunta o inquietud, no dudes en ponerte en contacto con el autor.</p>
+                <p>Este proyecto no tiene relación con Steam o Valve Corporation.</p>
+                <p>Las imágenes de los juegos son propiedad de sus respectivos desarrolladores y editores.</p>
+                <p>Este proyecto no tiene la intención de infringir ningún derecho de autor o marca registrada.</p>
+                <p>El uso de imágenes y nombres de juegos es solo para fines educativos y de demostración.</p>
                 <p>El logo fue creado por ChatGPT.</p>
                 <p>Gracias por tu comprensión y apoyo.</p>
                 <p>¡Disfruta de los juegos!</p>

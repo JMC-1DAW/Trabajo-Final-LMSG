@@ -126,53 +126,44 @@ document.addEventListener('DOMContentLoaded', () => {
     // Mostrar carrito en la página del carrito
     if (document.body.classList.contains('carrito-page')) {
         const carritoDisplay = document.getElementById('carrito-display');
-        carritoDisplay.innerHTML = '';
+        const totalDisplay = document.getElementById('total');
 
-        carrito.forEach((item, index) => {
-            const itemElement = document.createElement('li');
-            itemElement.textContent = `${item.nombre} - ${item.precio.toFixed(2)}€`;
+        function actualizarCarrito() {
+            carritoDisplay.innerHTML = '';
+            total = 0;
 
-            const quitarBtn = document.createElement('button');
-            quitarBtn.textContent = 'Quitar';
-            quitarBtn.classList.add('remove-from-cart');
-            quitarBtn.addEventListener('click', () => {
-                carrito.splice(index, 1);
-                localStorage.setItem('carrito', JSON.stringify(carrito));
-                actualizarCarrito();
-            });
+            if (carrito.length === 0) {
+                // Mostrar mensaje si el carrito está vacío
+                const mensajeVacio = document.createElement('p');
+                mensajeVacio.textContent = 'No se ha añadido nada al carrito, visita la página principal y añade juegos al carrito para calcular su precio.';
+                mensajeVacio.style.textAlign = 'center';
+                mensajeVacio.style.color = '#666';
+                carritoDisplay.appendChild(mensajeVacio);
+            } else {
+                // Mostrar los elementos del carrito
+                carrito.forEach((item, index) => {
+                    const itemElement = document.createElement('li');
+                    itemElement.textContent = `${item.nombre} - ${item.precio.toFixed(2)}€`;
 
-            itemElement.appendChild(quitarBtn);
-            carritoDisplay.appendChild(itemElement);
-            total += item.precio;
-        });
+                    const quitarBtn = document.createElement('button');
+                    quitarBtn.textContent = 'Quitar';
+                    quitarBtn.classList.add('remove-from-cart');
+                    quitarBtn.addEventListener('click', () => {
+                        carrito.splice(index, 1);
+                        localStorage.setItem('carrito', JSON.stringify(carrito));
+                        actualizarCarrito();
+                    });
 
-        document.getElementById('total').textContent = total.toFixed(2) + '€';
-    }
+                    itemElement.appendChild(quitarBtn);
+                    carritoDisplay.appendChild(itemElement);
+                    total += item.precio;
+                });
 
-    function actualizarCarrito() {
-        const carritoDisplay = document.getElementById('carrito-display');
-        carritoDisplay.innerHTML = '';
-        total = 0;
+                totalDisplay.textContent = total.toFixed(2) + '€';
+            }
+        }
 
-        carrito.forEach((item, index) => {
-            const itemElement = document.createElement('li');
-            itemElement.textContent = `${item.nombre} - ${item.precio.toFixed(2)}€`;
-
-            const quitarBtn = document.createElement('button');
-            quitarBtn.textContent = 'Quitar';
-            quitarBtn.classList.add('remove-from-cart');
-            quitarBtn.addEventListener('click', () => {
-                carrito.splice(index, 1);
-                localStorage.setItem('carrito', JSON.stringify(carrito));
-                actualizarCarrito();
-            });
-
-            itemElement.appendChild(quitarBtn);
-            carritoDisplay.appendChild(itemElement);
-            total += item.precio;
-        });
-
-        document.getElementById('total').textContent = total.toFixed(2) + '€';
+        actualizarCarrito();
     }
 
     const cantidadJuegosSelect = document.getElementById('cantidad-juegos');
@@ -198,5 +189,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const cantidad = parseInt(cantidadJuegosSelect.value, 10);
         mostrarJuegos(cantidad);
     });
+
 });
 
