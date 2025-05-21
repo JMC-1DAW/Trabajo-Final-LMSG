@@ -138,6 +138,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 mensajeVacio.textContent = 'No se ha añadido nada al carrito, visita la página principal y añade juegos al carrito para calcular su precio.';
                 mensajeVacio.style.textAlign = 'center';
                 mensajeVacio.style.color = '#666';
+                total = 0;
+                totalDisplay.textContent = total.toFixed(2) + '€';
                 carritoDisplay.appendChild(mensajeVacio);
             } else {
                 // Mostrar los elementos del carrito
