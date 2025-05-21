@@ -1,0 +1,6 @@
+Los archivos del proyecto para que funcionen tienen que estar en la carpeta de xampp "htdocs"
+También habrá que encender el Apache del Xampp para que funcione
+
+C:\Users\%Username%\Documents\Xampp\htdocs
+
+Si no se hacen estas cosas, el xsl no funcionará
