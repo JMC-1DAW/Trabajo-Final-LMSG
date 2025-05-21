@@ -1,9 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-
-<xsl:import href="IndieGameViewer_TopGames.xml"/>
-
-  <xsl:output method="html" indent="yes"/>
 
   <xsl:template match="/">
     <html>
@@ -38,7 +33,7 @@
           <label for="cantidad-juegos">Mostrar:</label>
           <select id="cantidad-juegos">
             <option value="5">5</option>
-            <option value="10" selected>10</option>
+            <option value="10">10</option>
             <option value="15">15</option>
             <option value="20">20</option>
             <option value="30">30</option>
@@ -69,12 +64,12 @@
 
         <footer>
             <div class="logo">
-                <img src="img/logo.png" alt="Logo de la Empresa" width="100">
+                <img src="img/logo.png" alt="Logo de la Empresa" width="100"></img>
             </div>
-            <p>&copy; 2025 IndieGameViewer</p>
+            <p>2025 IndieGameViewer</p>
             <p>Creado por: Javier Martín Cruz (1ºDAW)</p>
 
-            <br>
+            <br/>
             <div class="disclaimer">
                 <h3>Descargo de Responsabilidad:</h3>
                 <p>Este proyecto es un trabajo académico y no tiene fines comerciales.</p>
@@ -94,8 +89,10 @@
                 <p>¡Disfruta de los juegos!</p>
             </div>
         </footer>
-      </body>
-    </html>
+
+        <script src="script.js"></script>
+    </body>
+</html>
   </xsl:template>
 
 </xsl:stylesheet>
