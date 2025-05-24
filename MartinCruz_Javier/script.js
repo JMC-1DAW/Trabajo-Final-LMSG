@@ -157,15 +157,15 @@ document.addEventListener('DOMContentLoaded', function() {
         menuSelect.addEventListener('change', () => {
             if (menuSelect.value === 'main') {
                 // Redirige a la página principal de juegos Indie
-                window.location.href = 'IndieGameViewer.html';
+                window.location.href = 'index.html';
             }
             if (menuSelect.value === 'carrito') {
                 // Redirige a la página del carrito
-                window.location.href = 'IndieGameViewer_Cart.html';
+                window.location.href = 'cart.html';
             }
             if (menuSelect.value === 'top-juegos') {
                 // Redirige a la página de top juegos (XML)
-                window.location.href = 'IndieGameViewer_TopGames.xml';
+                window.location.href = 'topgames.xml';
             }
         });
     }

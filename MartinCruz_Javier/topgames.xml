@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="IndieGameViewer_TopGames.xsl"?>
-<?xml-model href="IndieGameViewer_TopGames.dtd" type="application/xml-dtd"?>
+<?xml-stylesheet type="text/xsl" href="topgames.xsl"?>
+<?xml-model href="topgames.dtd" type="application/xml-dtd"?>
 
 <!--
   Este archivo XML contiene información sobre los juegos indie más populares.
