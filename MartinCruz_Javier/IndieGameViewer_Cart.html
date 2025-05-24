@@ -1,3 +1,9 @@
+<!--
+  HTML para la página del carrito de compras de juegos indie.
+  - Permite al usuario ver los juegos añadidos al carrito y calcular el total.
+  - Autor: Javier Martín Cruz (1ºDAW)
+-->
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -7,27 +13,31 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="carrito-page">
+    <!-- Cabecera con navegación y controles de usuario -->
     <header>
-        <nav>
-            <select id="tema-color">
-                <option value="light">Tema claro</option>
-                <option value="dark">Tema oscuro</option>
-                <option value="vacio">Tema vacío</option>
-                <option value="dorado">Tema dorado</option>
-            </select>
-            <select id="menu">
-                <option value="carrito">Carrito</option>
-                <option value="main">Juegos Indie</option>
-                <option value="top-juegos">Top mejores juegos</option>
-            </select>
-            <div id="user-info" style="display: none;">
-                <span id="user-display"></span>
-                <button id="change-user">Cambiar</button>
-            </div>
-        </nav>
+            <nav>
+            <!-- Selector de tema de color para cambiar el aspecto visual -->
+                <select id="tema-color">
+                  <option value="light">Tema claro</option>
+                  <option value="dark">Tema oscuro</option>
+                  <option value="vacio">Tema vacío</option>
+                  <option value="dorado">Tema dorado</option>
+                </select>
+            <!-- Selector de menú para navegar entre secciones principales -->
+                <select id="menu">
+                    <option value="carrito">Carrito</option>
+                    <option value="main">Juegos Indie</option>
+                    <option value="top-juegos">Top mejores juegos</option>
+                </select>
+            <!-- Información y control de usuario (nombre y botón para cambiar usuario) -->
+                <div id="user-info" style="display: none;">
+                    <span id="user-display"></span>
+                    <button id="change-user">Cambiar</button>
+                </div>
+            </nav>
     </header>
 
-    <!-- Formulario para pedir nombre y edad -->
+    <!-- Formulario para pedir nombre y edad al usuario si no están guardados -->
     <div id="user-form" style="display: none;">
         <form id="user-data-form">
             <label for="nombre">Nombre:</label>
@@ -39,35 +49,38 @@
     </div>
 
     <main>
+        <!-- Sección principal del carrito de compras -->
         <section class="carrito">
             <h2>Tu Carrito</h2>
             <ul id="carrito-display">
                 <!-- Los elementos del carrito se mostrarán aquí dinámicamente -->
             </ul>
+            <!-- Muestra el total del carrito -->
             <p><strong>Total:</strong> <span id="total">0.00€</span></p>
         </section>
 
+        <!-- Sección informativa sobre el funcionamiento del carrito -->
         <section class="informacion">
             <h3>¿Cómo funciona el carrito?</h3>
             <p>El carrito de compras te permite calcular el precio total de los juegos que deseas adquirir. </p>
             <p>Sin embargo, este proyecto es solo una demostración académica y <b>no realiza compras reales</b>.</p>
             <p>Para comprar los juegos seleccionados, visita las páginas oficiales de los desarrolladores o distribuidores.</p>
             <p>(Los enlaces a sus respectivas páginas en Steam están en la página principal, por si quieres visitarlos desde ahí)</p>
-                <br>
+            <br>
             <p>Si deseas añadir juegos a tu carrito, visita la sección de juegos indie y selecciona los que te interesen.</p>
             <p>Si deseas eliminar un juego de tu carrito, simplemente haz clic en el botón "Eliminar" junto al juego correspondiente.</p>
-                <br>
+            <br>
             <p><b><i>¡Gracias por visitar y usar IndieGameViewer!</i></b></p>
         </section>
     </main>
 
+    <!-- Pie de página con logo, autoría y disclaimer legal -->
     <footer>
         <div class="logo">
             <img src="img/logo.png" alt="Logo de la Empresa" width="100">
         </div>
         <p>2025 IndieGameViewer</p>
         <p>Creado por: Javier Martín Cruz (1ºDAW)</p>
-
         <br>
         <div class="disclaimer">
             <h3>Descargo de Responsabilidad:</h3>
@@ -89,6 +102,7 @@
         </div>
     </footer>
 
+    <!-- Script principal para la interacción del carrito y usuario -->
     <script src="script.js"></script>
 </body>
 </html>

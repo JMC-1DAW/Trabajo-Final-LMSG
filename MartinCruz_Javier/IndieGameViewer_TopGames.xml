@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="IndieGameViewer_TopGames.dtd" type="application/xml-dtd"?>
 <?xml-stylesheet type="text/xsl" href="IndieGameViewer_TopGames.xsl"?>
+<?xml-model href="IndieGameViewer_TopGames.dtd" type="application/xml-dtd"?>
 
 <!--
   Este archivo XML contiene información sobre los juegos indie más populares.
-  Cada juego tiene un título, descripción, género, precio, valoración, fecha de salida y clasificación por edades (PEGI).
+    - Contiene información detallada de cada juego, incluyendo título, descripción, género, precio, valoración y PEGI.
+    - Autor: Javier Martín Cruz (1ºDAW)
 !-->
 
 <juegos>
@@ -15,8 +16,8 @@
     <precio>9.75</precio>
     <valoracion>
       <resenia>Extremadamente positiva</resenia>
-      <cantidad_resenias>50,000+</cantidad_resenias>
-      <porcentaje_positivo>97%</porcentaje_positivo>
+      <cantidad_resenias>50,000</cantidad_resenias>
+      <porcentaje_positivo>97</porcentaje_positivo>
     </valoracion>
     <fecha_salida>2016-12-09</fecha_salida>
     <pegi>
@@ -31,8 +32,8 @@
     <precio>9.99</precio>
     <valoracion>
       <resenia>Extremadamente positiva</resenia>
-      <cantidad_resenias>900,000+</cantidad_resenias>
-      <porcentaje_positivo>98%</porcentaje_positivo>
+      <cantidad_resenias>900,000</cantidad_resenias>
+      <porcentaje_positivo>98</porcentaje_positivo>
     </valoracion>
     <fecha_salida>2011-05-16</fecha_salida>
     <pegi>
@@ -47,8 +48,8 @@
     <precio>19.99</precio>
     <valoracion>
       <resenia>Extremadamente positiva</resenia>
-      <cantidad_resenias>100,000+</cantidad_resenias>
-      <porcentaje_positivo>96%</porcentaje_positivo>
+      <cantidad_resenias>100,000</cantidad_resenias>
+      <porcentaje_positivo>96</porcentaje_positivo>
     </valoracion>
     <fecha_salida>2017-08-01</fecha_salida>
     <pegi>
@@ -63,8 +64,8 @@
     <precio>14.99</precio>
     <valoracion>
       <resenia>Extremadamente positiva</resenia>
-      <cantidad_resenias>200,000+</cantidad_resenias>
-      <porcentaje_positivo>95%</porcentaje_positivo>
+      <cantidad_resenias>200,000</cantidad_resenias>
+      <porcentaje_positivo>95</porcentaje_positivo>
     </valoracion>
     <fecha_salida>2014-11-04</fecha_salida>
     <pegi>
@@ -79,8 +80,8 @@
     <precio>4.99</precio>
     <valoracion>
       <resenia>Muy positiva</resenia>
-      <cantidad_resenias>20,000+</cantidad_resenias>
-      <porcentaje_positivo>92%</porcentaje_positivo>
+      <cantidad_resenias>20,000</cantidad_resenias>
+      <porcentaje_positivo>92</porcentaje_positivo>
     </valoracion>
     <fecha_salida>2016-07-05</fecha_salida>
     <pegi>
@@ -95,8 +96,8 @@
     <precio>28.99</precio>
     <valoracion>
       <resenia>Muy positiva</resenia>
-      <cantidad_resenias>10,000+</cantidad_resenias>
-      <porcentaje_positivo>90%</porcentaje_positivo>
+      <cantidad_resenias>10,000</cantidad_resenias>
+      <porcentaje_positivo>90</porcentaje_positivo>
     </valoracion>
     <fecha_salida>2020-07-20</fecha_salida>
     <pegi>
@@ -111,8 +112,8 @@
     <precio>3.99</precio>
     <valoracion>
       <resenia>Muy positiva</resenia>
-      <cantidad_resenias>300,000+</cantidad_resenias>
-      <porcentaje_positivo>94%</porcentaje_positivo>
+      <cantidad_resenias>300,000</cantidad_resenias>
+      <porcentaje_positivo>94</porcentaje_positivo>
     </valoracion>
     <fecha_salida>2014-12-22</fecha_salida>
     <pegi>
@@ -127,8 +128,8 @@
       <precio>19.99</precio>
       <valoracion>
           <resenia>Extremadamente positiva</resenia>
-          <cantidad_resenias>50,000+</cantidad_resenias>
-          <porcentaje_positivo>97%</porcentaje_positivo>
+          <cantidad_resenias>50,000</cantidad_resenias>
+          <porcentaje_positivo>97</porcentaje_positivo>
       </valoracion>
       <fecha_salida>2023-06-28</fecha_salida>
       <pegi>
@@ -143,8 +144,8 @@
       <precio>14.99</precio>
       <valoracion>
           <resenia>Extremadamente positiva</resenia>
-          <cantidad_resenias>10,000+</cantidad_resenias>
-          <porcentaje_positivo>95%</porcentaje_positivo>
+          <cantidad_resenias>10,000</cantidad_resenias>
+          <porcentaje_positivo>95</porcentaje_positivo>
       </valoracion>
       <fecha_salida>2023-05-02</fecha_salida>
       <pegi>
@@ -159,8 +160,8 @@
       <precio>19.99</precio>
       <valoracion>
           <resenia>Extremadamente positiva</resenia>
-          <cantidad_resenias>30,000+</cantidad_resenias>
-          <porcentaje_positivo>96%</porcentaje_positivo>
+          <cantidad_resenias>30,000</cantidad_resenias>
+          <porcentaje_positivo>96</porcentaje_positivo>
       </valoracion>
       <fecha_salida>2018-05-31</fecha_salida>
       <pegi>
@@ -175,8 +176,8 @@
       <precio>19.99</precio>
       <valoracion>
           <resenia>Muy positiva</resenia>
-          <cantidad_resenias>40,000+</cantidad_resenias>
-          <porcentaje_positivo>94%</porcentaje_positivo>
+          <cantidad_resenias>40,000</cantidad_resenias>
+          <porcentaje_positivo>94</porcentaje_positivo>
       </valoracion>
       <fecha_salida>2019-04-18</fecha_salida>
       <pegi>
@@ -191,8 +192,8 @@
       <precio>4.99</precio>
       <valoracion>
           <resenia>Extremadamente positiva</resenia>
-          <cantidad_resenias>20,000+</cantidad_resenias>
-          <porcentaje_positivo>95%</porcentaje_positivo>
+          <cantidad_resenias>20,000</cantidad_resenias>
+          <porcentaje_positivo>95</porcentaje_positivo>
       </valoracion>
       <fecha_salida>2021-09-01</fecha_salida>
       <pegi>
@@ -207,8 +208,8 @@
       <precio>9.75</precio>
       <valoracion>
           <resenia>Extremadamente positiva</resenia>
-          <cantidad_resenias>50,000+</cantidad_resenias>
-          <porcentaje_positivo>96%</porcentaje_positivo>
+          <cantidad_resenias>50,000</cantidad_resenias>
+          <porcentaje_positivo>96</porcentaje_positivo>
       </valoracion>
       <fecha_salida>2013-08-08</fecha_salida>
       <pegi>
@@ -223,8 +224,8 @@
       <precio>19.99</precio>
       <valoracion>
           <resenia>Extremadamente positiva</resenia>
-          <cantidad_resenias>70,000+</cantidad_resenias>
-          <porcentaje_positivo>97%</porcentaje_positivo>
+          <cantidad_resenias>70,000</cantidad_resenias>
+          <porcentaje_positivo>97</porcentaje_positivo>
       </valoracion>
       <fecha_salida>2021-10-19</fecha_salida>
       <pegi>
@@ -239,8 +240,8 @@
       <precio>19.50</precio>
       <valoracion>
           <resenia>Muy positiva</resenia>
-          <cantidad_resenias>100,000+</cantidad_resenias>
-          <porcentaje_positivo>94%</porcentaje_positivo>
+          <cantidad_resenias>100,000</cantidad_resenias>
+          <porcentaje_positivo>94</porcentaje_positivo>
       </valoracion>
       <fecha_salida>2013-11-08</fecha_salida>
       <pegi>
@@ -255,8 +256,8 @@
       <precio>9.99</precio>
       <valoracion>
           <resenia>Extremadamente positiva</resenia>
-          <cantidad_resenias>500,000+</cantidad_resenias>
-          <porcentaje_positivo>96%</porcentaje_positivo>
+          <cantidad_resenias>500,000</cantidad_resenias>
+          <porcentaje_positivo>96</porcentaje_positivo>
       </valoracion>
       <fecha_salida>2015-09-15</fecha_salida>
       <pegi>
@@ -271,8 +272,8 @@
       <precio>29.99</precio>
       <valoracion>
           <resenia>Muy positiva</resenia>
-          <cantidad_resenias>50,000+</cantidad_resenias>
-          <porcentaje_positivo>93%</porcentaje_positivo>
+          <cantidad_resenias>50,000</cantidad_resenias>
+          <porcentaje_positivo>93</porcentaje_positivo>
       </valoracion>
       <fecha_salida>2024-06-17</fecha_salida>
       <pegi>
@@ -287,8 +288,8 @@
       <precio>23.99</precio>
       <valoracion>
           <resenia>Extremadamente positiva</resenia>
-          <cantidad_resenias>100,000+</cantidad_resenias>
-          <porcentaje_positivo>97%</porcentaje_positivo>
+          <cantidad_resenias>100,000</cantidad_resenias>
+          <porcentaje_positivo>97</porcentaje_positivo>
       </valoracion>
       <fecha_salida>2020-09-03</fecha_salida>
       <pegi>
@@ -303,8 +304,8 @@
       <precio>14.79</precio>
       <valoracion>
           <resenia>Extremadamente positiva</resenia>
-          <cantidad_resenias>300,000+</cantidad_resenias>
-          <porcentaje_positivo>97%</porcentaje_positivo>
+          <cantidad_resenias>300,000</cantidad_resenias>
+          <porcentaje_positivo>97</porcentaje_positivo>
       </valoracion>
       <fecha_salida>2017-02-24</fecha_salida>
       <pegi>
@@ -319,8 +320,8 @@
       <precio>19.50</precio>
       <valoracion>
           <resenia>Extremadamente positiva</resenia>
-          <cantidad_resenias>50,000+</cantidad_resenias>
-          <porcentaje_positivo>96%</porcentaje_positivo>
+          <cantidad_resenias>50,000</cantidad_resenias>
+          <porcentaje_positivo>96</porcentaje_positivo>
       </valoracion>
       <fecha_salida>2018-01-25</fecha_salida>
       <pegi>
@@ -335,8 +336,8 @@
       <precio>24.99</precio>
       <valoracion>
           <resenia>Extremadamente positiva</resenia>
-          <cantidad_resenias>100,000+</cantidad_resenias>
-          <porcentaje_positivo>95%</porcentaje_positivo>
+          <cantidad_resenias>100,000</cantidad_resenias>
+          <porcentaje_positivo>95</porcentaje_positivo>
       </valoracion>
       <fecha_salida>2018-08-07</fecha_salida>
       <pegi>
@@ -351,8 +352,8 @@
       <precio>13.99</precio>
       <valoracion>
           <resenia>Extremadamente positiva</resenia>
-          <cantidad_resenias>400,000+</cantidad_resenias>
-          <porcentaje_positivo>98%</porcentaje_positivo>
+          <cantidad_resenias>400,000</cantidad_resenias>
+          <porcentaje_positivo>98</porcentaje_positivo>
       </valoracion>
       <fecha_salida>2016-02-26</fecha_salida>
       <pegi>
@@ -367,8 +368,8 @@
       <precio>16.79</precio>
       <valoracion>
           <resenia>Extremadamente positiva</resenia>
-          <cantidad_resenias>100,000+</cantidad_resenias>
-          <porcentaje_positivo>96%</porcentaje_positivo>
+          <cantidad_resenias>100,000</cantidad_resenias>
+          <porcentaje_positivo>96</porcentaje_positivo>
       </valoracion>
       <fecha_salida>2020-12-25</fecha_salida>
       <pegi>

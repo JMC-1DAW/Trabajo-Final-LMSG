@@ -1,65 +1,114 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const temaSelect = document.getElementById('tema-color');
-    const menuSelect = document.getElementById('menu');
-    const userInfo = document.getElementById('user-info');
-    const userDisplay = document.getElementById('user-display');
-    const changeUserBtn = document.getElementById('change-user');
-    const userForm = document.getElementById('user-form');
-    const userDataForm = document.getElementById('user-data-form');
-    const nombreInput = document.getElementById('nombre');
-    const edadInput = document.getElementById('edad');
-    const juegos = document.querySelectorAll('.juego');
-    let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
-    let total = 0;
+/*
+  JavaScript para trabajar con la página IndieGameViewer.
+    - Permite cambiar el tema de la página (claro, oscuro, vacío, dorado).
+    - Permite seleccionar el menú (juegos Indie, carrito, top juegos).
+    - Permite guardar y mostrar la información del usuario (nombre y edad).
+    - Permite añadir juegos al carrito y guardar la información en localStorage.
+    - Permite mostrar una lista de juegos con su información (título, descripción, género, precio, valoración y PEGI).
+    - Autor: Javier Martín Cruz (1ºDAW)
+*/
 
-    // Mostrar formulario si no hay datos guardados
+document.addEventListener('DOMContentLoaded', function() {
+    // Selecciona el nodo raíz para buscar elementos (útil si el contenido se genera dinámicamente)
+    const root = document.getElementById('contenido') || document;
+
+    // --- Rellenar selects si están vacíos (por si el XSLT no los pone) ---
+    function ensureSelectOptions() {
+        // Añade opciones al selector de tema si está vacío
+        const temaSelect = root.querySelector('#tema-color');
+        if (temaSelect && temaSelect.children.length === 0) {
+            temaSelect.innerHTML = `
+                <option value="light">Tema claro</option>
+                <option value="dark">Tema oscuro</option>
+                <option value="vacio">Tema vacío</option>
+                <option value="dorado">Tema dorado</option>
+            `;
+        }
+        // Añade opciones al selector de menú si está vacío
+        const menuSelect = root.querySelector('#menu');
+        if (menuSelect && menuSelect.children.length === 0) {
+            menuSelect.innerHTML = `
+                <option value="top-juegos">Top mejores juegos</option>
+                <option value="main">Juegos Indie</option>
+                <option value="carrito">Carrito</option>
+            `;
+        }
+    }
+    ensureSelectOptions();
+
+    // --- Selección de elementos del DOM ---
+    const temaSelect = root.querySelector('#tema-color');
+    const menuSelect = root.querySelector('#menu');
+    const userInfo = root.querySelector('#user-info');
+    const userDisplay = root.querySelector('#user-display');
+    const changeUserBtn = root.querySelector('#change-user');
+    const userForm = root.querySelector('#user-form');
+    const userDataForm = root.querySelector('#user-data-form');
+    const nombreInput = root.querySelector('#nombre');
+    const edadInput = root.querySelector('#edad');
+    const juegos = root.querySelectorAll('.juego');
+    let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+
+    // --- USUARIO ---
+    // Recupera nombre y edad guardados en localStorage
     const nombreGuardado = localStorage.getItem('nombre');
     const edadGuardada = localStorage.getItem('edad');
 
-    if (!nombreGuardado || !edadGuardada) {
-        userForm.style.display = 'block';
-    } else {
+    // Si el formulario de usuario existe, gestiona la visualización y el guardado de datos
+    if (userForm && userDataForm && nombreInput && edadInput) {
+        if (!nombreGuardado || !edadGuardada) {
+            // Si no hay datos guardados, muestra el formulario
+            userForm.style.display = 'block';
+        } else {
+            // Si hay datos guardados, muestra el saludo al usuario
+            mostrarUsuario(nombreGuardado, edadGuardada);
+        }
+
+        // Evento para guardar los datos del usuario al enviar el formulario
+        userDataForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const nombre = nombreInput.value.trim();
+            const edad = parseInt(edadInput.value.trim());
+            if (nombre && edad >= 0) {
+                localStorage.setItem('nombre', nombre);
+                localStorage.setItem('edad', edad);
+                mostrarUsuario(nombre, edad);
+                userForm.style.display = 'none';
+                // Mensaje de advertencia si el usuario es menor de edad
+                if (edad < 18) {
+                    alert('Algunos de los contenidos mostrados en esta página no son aptos para todas las edades, proceda con precaución o acompañado de un adulto.');
+                } else {
+                    alert('Bienvenido/a a la página, disfruta de los juegos.');
+                }
+            } else {
+                alert('Por favor, introduce un nombre válido y una edad válida.');
+            }
+        });
+    } else if (nombreGuardado && edadGuardada && userInfo && userDisplay) {
+        // Si ya hay datos guardados y los elementos existen, muestra el saludo
         mostrarUsuario(nombreGuardado, edadGuardada);
     }
 
-    // Guardar datos del usuario
-    userDataForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        const nombre = nombreInput.value.trim();
-        const edad = parseInt(edadInput.value.trim());
-
-        if (nombre && edad >= 0) {
-            localStorage.setItem('nombre', nombre);
-            localStorage.setItem('edad', edad);
-            mostrarUsuario(nombre, edad);
-            userForm.style.display = 'none';
-
-            // Mostrar aviso si la edad es menor a 18
-            if (edad < 18) {
-                alert('Algunos de los contenidos mostrados en esta página no son aptos para todas las edades, proceda con precaución o acompañado de un adulto.');
-            } else {
-                alert('Bienvenido/a a la página, disfruta de los juegos.');
-            }
-        } else {
-            alert('Por favor, introduce un nombre válido y una edad válida.');
-        }
-    });
-
-    // Mostrar usuario en la parte superior derecha
+    // Función para mostrar el saludo al usuario
     function mostrarUsuario(nombre, edad) {
-        userInfo.style.display = 'block';
-        userDisplay.textContent = `Hola, ${nombre} (${edad} años)`;
+        if (userInfo && userDisplay) {
+            userInfo.style.display = 'block';
+            userDisplay.textContent = `Hola, ${nombre} (${edad} años)`;
+        }
     }
 
-    // Cambiar usuario
-    changeUserBtn.addEventListener('click', () => {
-        userForm.style.display = 'block';
-        userInfo.style.display = 'none';
-    });
+    // Permite cambiar de usuario mostrando el formulario de nuevo
+    if (changeUserBtn && userForm && userInfo) {
+        changeUserBtn.addEventListener('click', () => {
+            userForm.style.display = 'block';
+            userInfo.style.display = 'none';
+        });
+    }
 
-    // Aplicar el tema guardado en localStorage al cargar la página
+    // --- TEMA ---
+    // Recupera el tema guardado y lo aplica al body
     const temaGuardado = localStorage.getItem('tema');
-    if (temaGuardado) {
+    if (temaGuardado && temaSelect) {
         document.body.classList.remove('tema-oscuro', 'tema-claro', 'tema-vacio', 'tema-dorado');
         if (temaGuardado === 'dark') {
             document.body.classList.add('tema-oscuro');
@@ -76,121 +125,102 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Cambiar y guardar el tema seleccionado
-    temaSelect.addEventListener('change', () => {
-        const tema = temaSelect.value;
-        document.body.classList.remove('tema-oscuro', 'tema-claro', 'tema-vacio', 'tema-dorado');
-        if (tema === 'dark') {
-            document.body.classList.add('tema-oscuro');
-        } else if (tema === 'light') {
-            document.body.classList.add('tema-claro');
-        } else if (tema === 'vacio') {
-            document.body.classList.add('tema-vacio');
-        } else if (tema === 'dorado') {
-            document.body.classList.add('tema-dorado');
-        }
-        localStorage.setItem('tema', tema);
-    });
+    // Evento para cambiar el tema cuando el usuario selecciona otro
+    if (temaSelect) {
+        temaSelect.addEventListener('change', () => {
+            const tema = temaSelect.value;
+            document.body.classList.remove('tema-oscuro', 'tema-claro', 'tema-vacio', 'tema-dorado');
+            if (tema === 'dark') {
+                document.body.classList.add('tema-oscuro');
+            } else if (tema === 'light') {
+                document.body.classList.add('tema-claro');
+            } else if (tema === 'vacio') {
+                document.body.classList.add('tema-vacio');
+            } else if (tema === 'dorado') {
+                document.body.classList.add('tema-dorado');
+            }
+            // Guarda el tema seleccionado en localStorage
+            localStorage.setItem('tema', tema);
+        });
+    }
 
-    // Cambio de página al seleccionar "Carrito", "Juegos Indie" y "Top mejores juegos"
-    menuSelect.addEventListener('change', () => {
-        if (menuSelect.value === 'main') {
-            window.location.href = 'IndieGameViewer.html';
-        }
-        if (menuSelect.value === 'carrito') {
-            window.location.href = 'IndieGameViewer_Cart.html';
-        }
-        if (menuSelect.value === 'top-juegos') {
-            window.location.href = 'IndieGameViewer_TopGames.xml'; // Cambia a .xml para que el navegador aplique el XSL automáticamente
-        }
-    });
+    // --- MENÚ ---
+    // Permite la navegación entre páginas principales según el menú seleccionado
+    if (menuSelect) {
+        menuSelect.addEventListener('change', () => {
+            if (menuSelect.value === 'main') {
+                window.location.href = 'IndieGameViewer.html';
+            }
+            if (menuSelect.value === 'carrito') {
+                window.location.href = 'IndieGameViewer_Cart.html';
+            }
+            if (menuSelect.value === 'top-juegos') {
+                window.location.href = 'IndieGameViewer_TopGames.xml';
+            }
+        });
+    }
 
     // Añadir al carrito
-    juegos.forEach(juego => {
-        const agregarAlCarritoBtn = juego.querySelector('.add-to-cart');
-        const nombre = juego.querySelector('h2').textContent;
-        const precioTexto = juego.querySelector('ul li:nth-child(3)').textContent
-            .replace('Precio: ', '')
-            .replace('€', '')
-            .replace(',', '.')
-            .trim();
-        const precio = parseFloat(precioTexto);
+        juegos.forEach(juego => {
+            const agregarAlCarritoBtn = juego.querySelector('.add-to-cart');
+            const nombre = juego.querySelector('h2').textContent;
+            const precioTexto = juego.querySelector('ul li:nth-child(3)').textContent
+                .replace('Precio: ', '')
+                .replace('€', '')
+                .replace(',', '.')
+                .trim();
+            const precio = parseFloat(precioTexto);
 
-        agregarAlCarritoBtn.addEventListener('click', () => {
-            carrito.push({ nombre, precio });
-            localStorage.setItem('carrito', JSON.stringify(carrito));
-            alert(`${nombre} añadido al carrito.`);
+            agregarAlCarritoBtn.addEventListener('click', () => {
+                carrito.push({ nombre, precio });
+                localStorage.setItem('carrito', JSON.stringify(carrito));
+                alert(`${nombre} añadido al carrito.`);
+            });
         });
-    });
 
-    // Mostrar carrito en la página del carrito
-    if (document.body.classList.contains('carrito-page')) {
-        const carritoDisplay = document.getElementById('carrito-display');
-        const totalDisplay = document.getElementById('total');
+        // Mostrar carrito en la página del carrito
+        if (document.body.classList.contains('carrito-page')) {
+            const carritoDisplay = document.getElementById('carrito-display');
+            const totalDisplay = document.getElementById('total');
 
-        function actualizarCarrito() {
-            carritoDisplay.innerHTML = '';
-            total = 0;
-
-            if (carrito.length === 0) {
-                // Mostrar mensaje si el carrito está vacío
-                const mensajeVacio = document.createElement('p');
-                mensajeVacio.textContent = 'No se ha añadido nada al carrito, visita la página principal y añade juegos al carrito para calcular su precio.';
-                mensajeVacio.style.textAlign = 'center';
-                mensajeVacio.style.color = '#666';
+            function actualizarCarrito() {
+                carritoDisplay.innerHTML = '';
                 total = 0;
-                totalDisplay.textContent = total.toFixed(2) + '€';
-                carritoDisplay.appendChild(mensajeVacio);
-            } else {
-                // Mostrar los elementos del carrito
-                carrito.forEach((item, index) => {
-                    const itemElement = document.createElement('li');
-                    itemElement.textContent = `${item.nombre} - ${item.precio.toFixed(2)}€`;
 
-                    const quitarBtn = document.createElement('button');
-                    quitarBtn.textContent = 'Quitar';
-                    quitarBtn.classList.add('remove-from-cart');
-                    quitarBtn.addEventListener('click', () => {
-                        carrito.splice(index, 1);
-                        localStorage.setItem('carrito', JSON.stringify(carrito));
-                        actualizarCarrito();
+                if (carrito.length === 0) {
+                    // Mostrar mensaje si el carrito está vacío
+                    const mensajeVacio = document.createElement('p');
+                    mensajeVacio.textContent = 'No se ha añadido nada al carrito, visita la página principal y añade juegos al carrito para calcular su precio.';
+                    mensajeVacio.style.textAlign = 'center';
+                    mensajeVacio.style.color = '#666';
+                    total = 0;
+                    totalDisplay.textContent = total.toFixed(2) + '€';
+                    carritoDisplay.appendChild(mensajeVacio);
+                } else {
+                    // Mostrar los elementos del carrito
+                    carrito.forEach((item, index) => {
+                        const itemElement = document.createElement('li');
+                        itemElement.textContent = `${item.nombre} - ${item.precio.toFixed(2)}€`;
+
+                        const quitarBtn = document.createElement('button');
+                        quitarBtn.textContent = 'Quitar';
+                        quitarBtn.classList.add('remove-from-cart');
+                        quitarBtn.addEventListener('click', () => {
+                            carrito.splice(index, 1);
+                            localStorage.setItem('carrito', JSON.stringify(carrito));
+                            actualizarCarrito();
+                        });
+
+                        itemElement.appendChild(quitarBtn);
+                        carritoDisplay.appendChild(itemElement);
+                        total += item.precio;
                     });
 
-                    itemElement.appendChild(quitarBtn);
-                    carritoDisplay.appendChild(itemElement);
-                    total += item.precio;
-                });
-
-                totalDisplay.textContent = total.toFixed(2) + '€';
+                    totalDisplay.textContent = total.toFixed(2) + '€';
+                }
             }
+
+            actualizarCarrito();
         }
-
-        actualizarCarrito();
-    }
-
-    const cantidadJuegosSelect = document.getElementById('cantidad-juegos');
-    const juegosLista = document.getElementById('juegos-lista');
-    const topjuegos = Array.from(juegosLista.children);
-
-    // Función para mostrar la cantidad seleccionada de juegos
-    function mostrarJuegos(cantidad) {
-        topjuegos.forEach((juego, index) => {
-            if (index < cantidad) {
-                juego.style.display = 'block';
-            } else {
-                juego.style.display = 'none';
-            }
-        });
-    }
-
-    // Mostrar 10 juegos por defecto
-    mostrarJuegos(10);
-
-    // Cambiar la cantidad de juegos mostrados según la selección
-    cantidadJuegosSelect.addEventListener('change', () => {
-        const cantidad = parseInt(cantidadJuegosSelect.value, 10);
-        mostrarJuegos(cantidad);
-    });
-
 });
 

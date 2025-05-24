@@ -1,26 +1,38 @@
+<!--
+  XSLT para transformar el XML de juegos indie en una página HTML.
+  - Ordena los juegos por cantidad de reseñas positivas (cantidad_resenias * porcentaje_positivo / 100).
+  - Muestra información detallada de cada juego, incluyendo título, descripción, género, precio, valoración y PEGI.
+  - Autor: Javier Martín Cruz (1ºDAW)
+-->
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-
+  <xsl:output method="html" encoding="UTF-8" indent="yes"/>
+  <!-- Plantilla principal: transforma el nodo raíz en HTML completo -->
   <xsl:template match="/">
     <html>
       <head>
+        <meta charset="UTF-8"/>
         <title>Top Mejores Juegos</title>
-        <!-- Conexión con el archivo CSS -->
-        <link rel="stylesheet" type="text/css" href="style.css"/>
+        <link rel="stylesheet" href="style.css"/>
+        <script src="script.js"></script>
       </head>
       <body>
+        <!-- Cabecera con navegación y controles de usuario -->
         <header>
             <nav>
+            <!-- Selector de tema de color para cambiar el aspecto visual -->
                 <select id="tema-color">
-                  <option value="dark">Tema oscuro</option>
                   <option value="light">Tema claro</option>
+                  <option value="dark">Tema oscuro</option>
                   <option value="vacio">Tema vacío</option>
                   <option value="dorado">Tema dorado</option>
                 </select>
+            <!-- Selector de menú para navegar entre secciones principales -->
                 <select id="menu">
                     <option value="top-juegos">Top mejores juegos</option>
                     <option value="main">Juegos Indie</option>
                     <option value="carrito">Carrito</option>
                 </select>
+            <!-- Información y control de usuario (nombre y botón para cambiar usuario) -->
                 <div id="user-info" style="display: none;">
                     <span id="user-display"></span>
                     <button id="change-user">Cambiar</button>
@@ -28,47 +40,59 @@
             </nav>
         </header>
 
+        <!-- Formulario para pedir nombre y edad al usuario -->
+        <div id="user-form" style="display: none;">
+          <form id="user-data-form">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required="required"/>
+            <label for="edad">Edad:</label>
+            <input type="number" id="edad" name="edad" min="0" required="required"/>
+            <button type="submit">Guardar</button>
+          </form>
+        </div>
+
+        <!-- Contenido principal: listado de juegos -->
         <main>
-          <h1>Top Mejores Juegos</h1>
-          <label for="cantidad-juegos">Mostrar:</label>
-          <select id="cantidad-juegos">
-            <option value="5">5</option>
-            <option value="10">10</option>
-            <option value="15">15</option>
-            <option value="20">20</option>
-            <option value="30">30</option>
-            <option value="50">50</option>
-          </select>
           <div id="juegos-lista">
+            <!-- Itera sobre cada juego, ordenando por reseñas positivas -->
             <xsl:for-each select="/juegos/juego">
-              <!-- Ordenar por cantidad_resenias * porcentaje_positivo -->
-              <xsl:sort select="number(translate(valoracion/cantidad_resenias, '+,', '')) * number(valoracion/porcentaje_positivo)" data-type="number" order="descending"/>
+              <xsl:sort 
+                select="number(translate(valoracion/cantidad_resenias, '+,', '')) * number(valoracion/porcentaje_positivo) div 100"
+                data-type="number" order="descending"/>
               <div class="juego">
-                <h2><xsl:value-of select="titulo"/></h2>
-                <p><strong>Descripción:</strong> <xsl:value-of select="descripcion"/></p>
-                <p><strong>Género:</strong> <xsl:value-of select="genero"/></p>
-                <p><strong>Precio:</strong> <xsl:value-of select="precio"/> €</p>
-                <p><strong>Valoración:</strong>
+                <!-- Título del juego -->
+                <h2><u><xsl:value-of select="titulo"/></u></h2>
+                <!-- Descripción del juego -->
+                <p><b>Descripción:</b> <xsl:value-of select="descripcion"/></p>
+                <!-- Género del juego -->
+                <p><b>Género:</b> <xsl:value-of select="genero"/></p>
+                <!-- Precio del juego -->
+                <p><b>Precio:</b> <xsl:value-of select="precio"/> €</p>
+                <!-- Valoración: cantidad de reseñas y porcentaje positivo -->
+                <p><b>Valoración:</b>
                   <ul>
-                    <li><strong>Reseñas:</strong> <xsl:value-of select="valoracion/cantidad_resenias"/></li>
-                    <li><strong>Positivo:</strong> <xsl:value-of select="valoracion/porcentaje_positivo"/>%</li>
+                    <li><b>Reseñas: +</b> <xsl:value-of select="valoracion/cantidad_resenias"/></li>
+                    <li><b>Positivo:</b> <xsl:value-of select="valoracion/porcentaje_positivo"/>%</li>
                   </ul>
                 </p>
-                <p><strong>Fecha de salida:</strong> <xsl:value-of select="fecha_salida"/></p>
-                <p><strong>Edad recomendada:</strong> <xsl:value-of select="pegi/edad_recomendada"/></p>
-                <p><strong>Apto para todo público:</strong> <xsl:value-of select="pegi/apto_todo_publico"/></p>
+                <!-- Fecha de salida -->
+                <p><b>Fecha de salida:</b> <xsl:value-of select="fecha_salida"/></p>
+                <!-- Edad recomendada (PEGI) -->
+                <p><b>Edad recomendada:</b> <xsl:value-of select="pegi/edad_recomendada"/></p>
+                <!-- Indicación de apto para todo público -->
+                <p><i><b>Apto para todo público: </b></i> <xsl:value-of select="pegi/apto_todo_publico"/></p>
               </div>
             </xsl:for-each>
           </div>
         </main>
 
+        <!-- Pie de página con logo y disclaimer -->
         <footer>
             <div class="logo">
                 <img src="img/logo.png" alt="Logo de la Empresa" width="100"></img>
             </div>
             <p>2025 IndieGameViewer</p>
             <p>Creado por: Javier Martín Cruz (1ºDAW)</p>
-
             <br/>
             <div class="disclaimer">
                 <h3>Descargo de Responsabilidad:</h3>
@@ -89,10 +113,7 @@
                 <p>¡Disfruta de los juegos!</p>
             </div>
         </footer>
-
-        <script src="script.js"></script>
-    </body>
-</html>
+      </body>
+    </html>
   </xsl:template>
-
 </xsl:stylesheet>

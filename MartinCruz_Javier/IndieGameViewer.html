@@ -1,3 +1,10 @@
+<!--
+  HTML para la página principal de IndieGameViewer.
+    - Permite al usuario ver y añadir juegos indie al carrito de compras.
+    - Incluye información detallada de cada juego, como requisitos del sistema y enlaces a Steam.
+    - Autor: Javier Martín Cruz (1ºDAW)
+-->
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -8,23 +15,26 @@
 </head>
 <body>
     <header>
-        <nav>
-            <select id="tema-color">
-                <option value="light">Tema claro</option>
-                <option value="dark">Tema oscuro</option>
-                <option value="vacio">Tema vacío</option>
-                <option value="dorado">Tema dorado</option>
-            </select>
-            <select id="menu">
-                <option value="main">Juegos Indie</option>
-                <option value="top-juegos">Top mejores juegos</option>
-                <option value="carrito">Carrito</option>
-            </select>
-            <div id="user-info" style="display: none;">
-                <span id="user-display"></span>
-                <button id="change-user">Cambiar</button>
-            </div>
-        </nav>
+            <nav>
+            <!-- Selector de tema de color para cambiar el aspecto visual -->
+                <select id="tema-color">
+                  <option value="light">Tema claro</option>
+                  <option value="dark">Tema oscuro</option>
+                  <option value="vacio">Tema vacío</option>
+                  <option value="dorado">Tema dorado</option>
+                </select>
+            <!-- Selector de menú para navegar entre secciones principales -->
+                <select id="menu">
+                    <option value="main">Juegos Indie</option>
+                    <option value="top-juegos">Top mejores juegos</option>
+                    <option value="carrito">Carrito</option>
+                </select>
+            <!-- Información y control de usuario (nombre y botón para cambiar usuario) -->
+                <div id="user-info" style="display: none;">
+                    <span id="user-display"></span>
+                    <button id="change-user">Cambiar</button>
+                </div>
+            </nav>
     </header>
 
     <!-- Formulario para pedir nombre y edad -->
