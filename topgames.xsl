@@ -47,7 +47,7 @@
             <input type="text" id="nombre" name="nombre" required="required"/>
             <label for="edad">Edad:</label>
             <input type="number" id="edad" name="edad" min="0" required="required"/>
-            <button type="submit">Guardar</button>
+            <button type="submit">Confirmar</button>
           </form>
         </div>
 
