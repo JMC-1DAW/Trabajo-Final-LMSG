@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const root = document.getElementById('contenido') || document;
 
     // --- Rellenar selects si están vacíos (por si el XSLT no los pone) ---
+    // Esta función asegura que los selectores de tema y menú tengan opciones, incluso si el XSLT no las ha generado.
     function ensureSelectOptions() {
         // Añade opciones al selector de tema si está vacío
         const temaSelect = root.querySelector('#tema-color');
@@ -37,6 +38,7 @@ document.addEventListener('DOMContentLoaded', function() {
     ensureSelectOptions();
 
     // --- Selección de elementos del DOM ---
+    // Se seleccionan los elementos principales de la interfaz para manipularlos posteriormente.
     const temaSelect = root.querySelector('#tema-color');
     const menuSelect = root.querySelector('#menu');
     const userInfo = root.querySelector('#user-info');
@@ -47,20 +49,21 @@ document.addEventListener('DOMContentLoaded', function() {
     const nombreInput = root.querySelector('#nombre');
     const edadInput = root.querySelector('#edad');
     const juegos = root.querySelectorAll('.juego');
+    // El carrito se inicializa a partir de localStorage, o como array vacío si no existe.
     let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
 
     // --- USUARIO ---
-    // Recupera nombre y edad guardados en localStorage
+    // Recupera nombre y edad guardados en localStorage para mostrar el saludo o el formulario.
     const nombreGuardado = localStorage.getItem('nombre');
     const edadGuardada = localStorage.getItem('edad');
 
     // Si el formulario de usuario existe, gestiona la visualización y el guardado de datos
     if (userForm && userDataForm && nombreInput && edadInput) {
         if (!nombreGuardado || !edadGuardada) {
-            // Si no hay datos guardados, muestra el formulario
+            // Si no hay datos guardados, muestra el formulario para que el usuario los introduzca.
             userForm.style.display = 'block';
         } else {
-            // Si hay datos guardados, muestra el saludo al usuario
+            // Si hay datos guardados, muestra el saludo al usuario.
             mostrarUsuario(nombreGuardado, edadGuardada);
         }
 
@@ -70,6 +73,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const nombre = nombreInput.value.trim();
             const edad = parseInt(edadInput.value.trim());
             if (nombre && edad >= 0) {
+                // Guarda los datos en localStorage y muestra el saludo.
                 localStorage.setItem('nombre', nombre);
                 localStorage.setItem('edad', edad);
                 mostrarUsuario(nombre, edad);
@@ -90,6 +94,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Función para mostrar el saludo al usuario
+    // Muestra el bloque de información del usuario y el saludo personalizado.
     function mostrarUsuario(nombre, edad) {
         if (userInfo && userDisplay) {
             userInfo.style.display = 'block';
@@ -109,6 +114,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Recupera el tema guardado y lo aplica al body
     const temaGuardado = localStorage.getItem('tema');
     if (temaGuardado && temaSelect) {
+        // Elimina todas las clases de tema antes de aplicar la nueva.
         document.body.classList.remove('tema-oscuro', 'tema-claro', 'tema-vacio', 'tema-dorado');
         if (temaGuardado === 'dark') {
             document.body.classList.add('tema-oscuro');
@@ -129,6 +135,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (temaSelect) {
         temaSelect.addEventListener('change', () => {
             const tema = temaSelect.value;
+            // Elimina todas las clases de tema antes de aplicar la nueva.
             document.body.classList.remove('tema-oscuro', 'tema-claro', 'tema-vacio', 'tema-dorado');
             if (tema === 'dark') {
                 document.body.classList.add('tema-oscuro');
@@ -149,78 +156,90 @@ document.addEventListener('DOMContentLoaded', function() {
     if (menuSelect) {
         menuSelect.addEventListener('change', () => {
             if (menuSelect.value === 'main') {
+                // Redirige a la página principal de juegos Indie
                 window.location.href = 'IndieGameViewer.html';
             }
             if (menuSelect.value === 'carrito') {
+                // Redirige a la página del carrito
                 window.location.href = 'IndieGameViewer_Cart.html';
             }
             if (menuSelect.value === 'top-juegos') {
+                // Redirige a la página de top juegos (XML)
                 window.location.href = 'IndieGameViewer_TopGames.xml';
             }
         });
     }
 
-    // Añadir al carrito
-        juegos.forEach(juego => {
-            const agregarAlCarritoBtn = juego.querySelector('.add-to-cart');
-            const nombre = juego.querySelector('h2').textContent;
-            const precioTexto = juego.querySelector('ul li:nth-child(3)').textContent
-                .replace('Precio: ', '')
-                .replace('€', '')
-                .replace(',', '.')
-                .trim();
-            const precio = parseFloat(precioTexto);
+    // --- AÑADIR AL CARRITO ---
+    // Para cada juego mostrado, añade un evento al botón "Añadir al carrito".
+    juegos.forEach(juego => {
+        const agregarAlCarritoBtn = juego.querySelector('.add-to-cart');
+        // Obtiene el nombre y el precio del juego desde el DOM.
+        const nombre = juego.querySelector('h2').textContent;
+        const precioTexto = juego.querySelector('ul li:nth-child(3)').textContent
+            .replace('Precio: ', '')
+            .replace('€', '')
+            .replace(',', '.')
+            .trim();
+        const precio = parseFloat(precioTexto);
 
-            agregarAlCarritoBtn.addEventListener('click', () => {
-                carrito.push({ nombre, precio });
-                localStorage.setItem('carrito', JSON.stringify(carrito));
-                alert(`${nombre} añadido al carrito.`);
-            });
+        // Al hacer clic, añade el juego al carrito y lo guarda en localStorage.
+        agregarAlCarritoBtn.addEventListener('click', () => {
+            carrito.push({ nombre, precio });
+            localStorage.setItem('carrito', JSON.stringify(carrito));
+            alert(`${nombre} añadido al carrito.`);
         });
+    });
 
-        // Mostrar carrito en la página del carrito
-        if (document.body.classList.contains('carrito-page')) {
-            const carritoDisplay = document.getElementById('carrito-display');
-            const totalDisplay = document.getElementById('total');
+    // --- MOSTRAR CARRITO EN LA PÁGINA DEL CARRITO ---
+    // Si estamos en la página del carrito, muestra los juegos añadidos y permite quitarlos.
+    if (document.body.classList.contains('carrito-page')) {
+        const carritoDisplay = document.getElementById('carrito-display');
+        const totalDisplay = document.getElementById('total');
 
-            function actualizarCarrito() {
-                carritoDisplay.innerHTML = '';
+        // Función para actualizar la visualización del carrito y el total.
+        function actualizarCarrito() {
+            carritoDisplay.innerHTML = '';
+            total = 0;
+
+            if (carrito.length === 0) {
+                // Mostrar mensaje si el carrito está vacío
+                const mensajeVacio = document.createElement('p');
+                mensajeVacio.textContent = 'No se ha añadido nada al carrito, visita la página principal y añade juegos al carrito para calcular su precio.';
+                mensajeVacio.style.textAlign = 'center';
+                mensajeVacio.style.color = '#666';
                 total = 0;
+                totalDisplay.textContent = total.toFixed(2) + '€';
+                carritoDisplay.appendChild(mensajeVacio);
+            } else {
+                // Mostrar los elementos del carrito
+                carrito.forEach((item, index) => {
+                    const itemElement = document.createElement('li');
+                    itemElement.textContent = `${item.nombre} - ${item.precio.toFixed(2)}€`;
 
-                if (carrito.length === 0) {
-                    // Mostrar mensaje si el carrito está vacío
-                    const mensajeVacio = document.createElement('p');
-                    mensajeVacio.textContent = 'No se ha añadido nada al carrito, visita la página principal y añade juegos al carrito para calcular su precio.';
-                    mensajeVacio.style.textAlign = 'center';
-                    mensajeVacio.style.color = '#666';
-                    total = 0;
-                    totalDisplay.textContent = total.toFixed(2) + '€';
-                    carritoDisplay.appendChild(mensajeVacio);
-                } else {
-                    // Mostrar los elementos del carrito
-                    carrito.forEach((item, index) => {
-                        const itemElement = document.createElement('li');
-                        itemElement.textContent = `${item.nombre} - ${item.precio.toFixed(2)}€`;
-
-                        const quitarBtn = document.createElement('button');
-                        quitarBtn.textContent = 'Quitar';
-                        quitarBtn.classList.add('remove-from-cart');
-                        quitarBtn.addEventListener('click', () => {
-                            carrito.splice(index, 1);
-                            localStorage.setItem('carrito', JSON.stringify(carrito));
-                            actualizarCarrito();
-                        });
-
-                        itemElement.appendChild(quitarBtn);
-                        carritoDisplay.appendChild(itemElement);
-                        total += item.precio;
+                    // Botón para quitar el juego del carrito
+                    const quitarBtn = document.createElement('button');
+                    quitarBtn.textContent = 'Quitar';
+                    quitarBtn.classList.add('remove-from-cart');
+                    quitarBtn.addEventListener('click', () => {
+                        // Elimina el juego del carrito y actualiza la vista y el almacenamiento.
+                        carrito.splice(index, 1);
+                        localStorage.setItem('carrito', JSON.stringify(carrito));
+                        actualizarCarrito();
                     });
 
-                    totalDisplay.textContent = total.toFixed(2) + '€';
-                }
-            }
+                    itemElement.appendChild(quitarBtn);
+                    carritoDisplay.appendChild(itemElement);
+                    total += item.precio;
+                });
 
-            actualizarCarrito();
+                // Muestra el total actualizado
+                totalDisplay.textContent = total.toFixed(2) + '€';
+            }
         }
+
+        // Inicializa la visualización del carrito al cargar la página.
+        actualizarCarrito();
+    }
 });
 
